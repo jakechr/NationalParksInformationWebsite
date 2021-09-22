@@ -1,8 +1,20 @@
+import url(//db.onlinewebfonts.com/c/02b0cfe9a43c6fc48f54c9bf6f59dbfb?family=Copyright+Klim+Type+Foundry);
+
+@font-face {
+  font-family: "Foundry";
+  src: url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.eot");
+  src: url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.woff") format("woff"), url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.svg#Copyright Klim Type Foundry") format("svg");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Times New Roman", serif;
+  font-family: "Foundry", serif;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  font-family: "Foundry";
 }
 
 .navbar-container {
