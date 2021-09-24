@@ -17,6 +17,33 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: "Foundry";
 }
 
+.main-body-container h2 {
+  text-align: center;
+}
+
+.main-body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main-body-paragraph-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.main-body-image-container,
+.recent-blog-post {
+  display: flex;
+}
+
+.main-body-image-container,
+.recent-blog-post img {
+  width: 100%;
+}
+
 .navbar-container {
   top: 0;
   margin: 0;
@@ -61,3 +88,36 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .intro-photo {}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-body-size {
+    width: 80%;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  .main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .main-body-size {
+    width: 50%;
+  }
+}
