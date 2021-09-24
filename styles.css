@@ -68,8 +68,8 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.newsletter-intro {
-  padding-left: 60px;
+.newsletter-intro h1 {
+  text-align: center;
 }
 
 .newsletter-invite img {
@@ -79,18 +79,33 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 50%;
 }
 
-.newsletter_invite {
+.email-invite {
+  padding-top: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.email-invite .email-form {
+  width: 60%;
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  background: lightgray;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.intro-photo {}
+.input-group {
+  justify-content: center;
+}
 
 /* Mobile Styles */
-@media only screen and (max-width: 400px) {}
+@media only screen and (max-width: 400px) {
+  .email-invite .email-form {
+    width: 90%;
+  }
+}
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
@@ -99,6 +114,10 @@ p, h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .email-invite .email-form {
+    width: 70%;
   }
 
   .main-body-size {

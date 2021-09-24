@@ -11,22 +11,27 @@
 </head>
 
 <body>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="blog.html">Blog</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="newsletter.html">Newsletter</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="contact.html">Contact</a>
-      </li>
-    </ul>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html"><img src="/images/happy_trails.png" alt="Happy Trails logo" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="newsletter.html">Newsletter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 
   <div class='main-body'>
@@ -38,7 +43,7 @@
 
           <br>
 
-          <p>Why join?</p>
+          <h2>Why join?</h2>
           <ul>
             <li>It's totally free.</li>
             <li>You can't go on every hike, but I can. You can find out where the best views and hikes are.</li>
@@ -51,8 +56,8 @@
         <div class="newsletter-invite">
           <img src="images/newsletter.jpg" alt="newsletter-image">
 
-          <div class="col-lg-4 col-md-6 mb-lg-0">
-            <p class="text-muted">What are you waiting for, sign
+          <div class="email-invite">
+            <p class="text-muted email-invite">What are you waiting for, sign
               up below!</p>
             <div class="p-1 rounded border email-form">
               <div class="input-group">
@@ -64,70 +69,73 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
 
-        <footer class="bg-white">
-          <div class="container py-5">
-            <div class="row py-4">
-              <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180" class="mb-3">
-                <p class="font-italic text-muted">"Hiking is not escapism; it's realism.
-                  The people who choose to spend time outdoors are not running away
-                  from anything; we are returning to where we belong."
-                  <br />- Jennifer Pharr Davis
-                </p>
-                <ul class="list-inline mt-4">
-                  <li class="list-inline-item"><a href="https://twitter.com" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
-                  <li class="list-inline-item"><a href="https://facebook.com" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
-                  <li class="list-inline-item"><a href="https://instagram.com" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
-                  <li class="list-inline-item"><a href="https://pinterest.com" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
-                  <li class="list-inline-item"><a href="https://vimeo.com" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
-                </ul>
-              </div>
-              <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                <h6 class="text-uppercase font-weight-bold mb-4">Favorite Hikes</h6>
-                <ul class="list-unstyled mb-0">
-                  <li class="mb-2"><a href="blog.html" class="text-muted">Angel's Landing</a></li>
-                  <li class="mb-2"><a href="blog.html" class="text-muted">Delicate Arch</a></li>
-                  <li class="mb-2"><a href="blog.html" class="text-muted">Kanarra Creek</a></li>
-                  <li class="mb-2"><a href="blog.html" class="text-muted">Primrose Overlook</a></li>
-                </ul>
-              </div>
-              <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-                <h6 class="text-uppercase font-weight-bold mb-4">Contact Me</h6>
-                <p class="text-muted mb-2">1747 East Avenue Road
-                  <br />Suite 101
-                  <br />San Diego, California 63956
-                </p>
-                <p class="text-muted mb-2">847-999-1198</p>
-              </div>
-              <div class="col-lg-4 col-md-6 mb-lg-0">
-                <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
-                <p class="text-muted mb-4">If you want to receive my newsletters, sign
-                  up below.</p>
-                <div class="p-1 rounded border">
-                  <div class="input-group">
-                    <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
-                    <div class="input-group-append">
-                      <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
-                    </div>
-                  </div>
-                </div>
+  <footer class="bg-white">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180" class="mb-3">
+          <p class="font-italic text-muted">"Hiking is not escapism; it's realism.
+            The people who choose to spend time outdoors are not running away
+            from anything; we are returning to where we belong."
+            <br />- Jennifer Pharr Davis
+          </p>
+          <ul class="list-inline mt-4">
+            <li class="list-inline-item"><a href="https://twitter.com" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="https://facebook.com" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://instagram.com" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="https://pinterest.com" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
+            <li class="list-inline-item"><a href="https://vimeo.com" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Favorite Hikes</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="blog.html" class="text-muted">Angel's Landing</a></li>
+            <li class="mb-2"><a href="blog.html" class="text-muted">Delicate Arch</a></li>
+            <li class="mb-2"><a href="blog.html" class="text-muted">Kanarra Creek</a></li>
+            <li class="mb-2"><a href="blog.html" class="text-muted">Primrose Overlook</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Contact Me</h6>
+          <p class="text-muted mb-2">1747 East Avenue Road
+            <br />Suite 101
+            <br />San Diego, California 63956
+          </p>
+          <p class="text-muted mb-2">847-999-1198</p>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
+          <p class="text-muted mb-4">If you want to receive my newsletters, sign
+            up below.</p>
+          <div class="p-1 rounded border">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <!-- Copyrights -->
-          <div class="bg-light py-4">
-            <div class="container text-center">
-              <a href="https://github.com/jwc12551/CreativeProject">
-                <p class="text-muted mb-0 py-2">GitHub Repo</p>
-              </a>
-            </div>
-          </div>
-        </footer>
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+      <div class="container text-center">
+        <a href="https://github.com/jwc12551/CreativeProject">
+          <p class="text-muted mb-0 py-2">GitHub Repo</p>
+        </a>
+      </div>
+    </div>
+  </footer>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
