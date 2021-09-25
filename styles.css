@@ -27,6 +27,14 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: "Foundry";
 }
 
+.blog-body-size {
+  width: 90%;
+}
+
+.header-container {
+  text-align: center;
+}
+
 .main-body-container h2 {
   text-align: center;
 }
@@ -130,6 +138,25 @@ p, h1, h2, h3, h4, h5, h6 {
   padding: 0 30px 40px 0;
 }
 
+.hike-gridd {
+  align-items: center;
+  justify-content: center;
+}
+
+.hike-gridd-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hike-gridd-container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0px 5px 5px 5px;
+}
+
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
   .email-invite .email-form {
@@ -144,6 +171,10 @@ p, h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .blog-body-size {
+    width: 90%;
   }
 
   .email-invite .email-form {
@@ -193,6 +224,44 @@ p, h1, h2, h3, h4, h5, h6 {
   .most-recent-blog-post-last-item img {
     max-width: 100%;
   }
+
+  .hike-gridd-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hike-gridd {
+    display: flex;
+    justify-content: center;
+    /* this and next for photos to align and change */
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* flex-direction: column; */
+    align-items: center;
+    /* needed for flex-frection: column; */
+  }
+
+  .hike-gridd-item {
+    width: 300px;
+    background-color: #edf4ee;
+    padding: 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .hike-gridd-item .photo {}
+
+  .hike-gridd-item img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .hike-gridd-item p {
+    width: 100%;
+    height: 110px;
+    background-color:
+  }
 }
 
 /* Desktop Styles */
@@ -208,6 +277,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
   .main-body-size {
     width: 65%;
+  }
+
+  .blog-body-size {
+    width: 80%;
   }
 
   .main-body-container {
@@ -271,5 +344,33 @@ p, h1, h2, h3, h4, h5, h6 {
 
   .most-recent-blog-post-last-item img {
     max-width: 100%;
+  }
+
+  .hike-gridd-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hike-gridd {
+    display: flex;
+    justify-content: center;
+    /* this and next for photos to align and change */
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* flex-direction: column; */
+    align-items: center;
+    /* needed for flex-frection: column; */
+  }
+
+  .hike-gridd-item {
+    border: 1px solid #fff;
+    width: 410px;
+    padding: 5px;
+  }
+
+  .hike-gridd-item img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
   }
 }
