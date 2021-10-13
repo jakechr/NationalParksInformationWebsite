@@ -199,6 +199,21 @@ p, h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
+.github-container {
+  float: left;
+  max-height: 50px;
+  max-width: 100px;
+}
+
+.github-container img {
+  width: 100%;
+  height: auto;
+}
+
+.github-image {
+  height: 50px;
+}
+
 .hike-gridd-item .text {}
 
 /* Mobile Styles */
