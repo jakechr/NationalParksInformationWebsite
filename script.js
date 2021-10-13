@@ -15,7 +15,7 @@ document.getElementById("weatherSubmit").addEventListener("click", function(even
       if (json.cod == '404') {
         document.getElementById("resultDivs").innerHTML = "";
       } else {
-        backgroundImage = json.data[0].images[0];
+        backgroundImage = "url(" + json.data[0].images[0].url + ")";
 
 
         // let resultDivs = "<div id=\"weatherResults\"></div><div id=\"forecastResults\"></div>";
