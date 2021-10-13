@@ -3,7 +3,7 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
   const value = document.getElementById("parkInput").value;
   if (value === "")
     return;
-  const url = "https://developer.nps.gov/api/v1/parks?limit=50&start=0&q=" + value + "&api_key=DpXaMIhw6NpRLqadO3J0L9mS1lgstpqjIh69HEoa";
+  const url = "https://developer.nps.gov/api/v1/parks?limit=40&start=0&q=" + value + "&api_key=DpXaMIhw6NpRLqadO3J0L9mS1lgstpqjIh69HEoa";
   fetch(url)
     .then(function(response) {
       console.log(response);
@@ -12,10 +12,25 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
     }).then(function(json) {
       console.log(json);
       let backgroundImage = 'url(images/standardbg.jpg)';
-      if (json.cod == '404') {
+      if (json.cod == '404' || json.data.length === 0) {
         document.getElementById("resultDivs").innerHTML = "";
       } else {
-        backgroundImage = "url(" + json.data[0].images[0].url + ")";
+
+        let infoToDisplay = null;
+        // It returns many national parks so iterate through to find the correct one
+        for (i = 0; i < json.data.length; i++) {
+          if (json.data[i].fullName.toLowerCase().includes(value.toLowerCase())) {
+            infoToDisplay = json.data[i];
+            break;
+          }
+        }
+
+        if (infoToDisplay == null) {
+          // say theres no data for this place
+        } else {
+          console.log(infoToDisplay.fullName);
+          backgroundImage = "url(" + infoToDisplay.images[0].url + ")";
+        }
 
 
         // let resultDivs = "<div id=\"weatherResults\"></div><div id=\"forecastResults\"></div>";
@@ -35,9 +50,8 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
         // results += '<div class = \'table-left\'>' + 'Wind Speed</div><div class = \'table-right\'>' + json.wind.speed + " mph</div>";
         // results += '</div>';
         // document.getElementById("weatherResults").innerHTML = results;
+        document.body.style.backgroundImage = backgroundImage;
       }
-
-      document.body.style.backgroundImage = backgroundImage;
 
     });
   // const url2 = "http://api.openweathermap.org/data/2.5/forecast?q=" + value + ", US&units=imperial" + "&APPID=60347f560a3b028d1ea0ceda27cb0ea4";

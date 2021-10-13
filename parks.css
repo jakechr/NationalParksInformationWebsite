@@ -35,6 +35,7 @@ html {
   -moz-box-shadow: 0 0 20px black;
   -webkit-box-shadow: 0 0 20px black;
   box-shadow: 0 0 20px black;
+  text-align: left;
 }
 
 .navbar-brand {
@@ -60,7 +61,7 @@ body {
   /* This is what makes the background image rescale based on its container's size */
   background-size: cover;
   /* Pick a solid background color that will be displayed while the background image is loading */
-  background-color: #464646;
+  background-color: #f7f7f7;
   /* SHORTHAND CSS NOTATION
    * background: url(background-photo.jpg) center center cover no-repeat fixed;
    */
