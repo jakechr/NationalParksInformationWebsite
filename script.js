@@ -26,24 +26,26 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
         }
 
         let resultDivs = "<div id='parkResult'></div>";
+        let parkResult = "";
 
         if (infoToDisplay == null) {
           document.getElementById("resultDivs").innerHTML = resultDivs;
 
-          let results = "";
-          results += '<h2>No results found for:</h2>';
-          results += '<h2>' + value + '</h2>';
-          document.getElementById("parkResult").innerHTML = results;
+          parkResult += '<h2>No results found for:</h2>';
+          parkResult += '<h2>' + value + '</h2>';
         } else {
           // This is where to put json info
           console.log(infoToDisplay.fullName);
           resultDivs += "<div id='parkInfo'></div>";
           document.getElementById("resultDivs").innerHTML = resultDivs;
 
+          parkResult = '<h2>' + infoToDisplay.fullName + '</h2>';
+
 
           backgroundImage = "url(" + infoToDisplay.images[0].url + ")";
           document.body.style.backgroundImage = backgroundImage;
         }
+        document.getElementById("parkResult").innerHTML = parkResult;
       }
 
     });
