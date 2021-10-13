@@ -31,7 +31,7 @@ html {
   background-color: white;
   background: rgb(245, 245, 245);
   /* The Fallback */
-  background: rgba(245, 245, 245, 0.5);
+  background: rgba(245, 245, 245, 0.75);
   -moz-box-shadow: 0 0 20px black;
   -webkit-box-shadow: 0 0 20px black;
   box-shadow: 0 0 20px black;
@@ -103,6 +103,7 @@ input[type="submit"] {
 #resultDivs {
   display: flex;
   flex-direction: column;
+  min-height: 500px;
 }
 
 #weatherResults {

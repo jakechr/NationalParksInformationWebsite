@@ -1,6 +1,6 @@
-document.getElementById("weatherSubmit").addEventListener("click", function(event) {
+document.getElementById("parkSubmit").addEventListener("click", function(event) {
   event.preventDefault();
-  const value = document.getElementById("weatherInput").value;
+  const value = document.getElementById("parkInput").value;
   if (value === "")
     return;
   const url = "https://developer.nps.gov/api/v1/parks?limit=50&start=0&q=" + value + "&api_key=DpXaMIhw6NpRLqadO3J0L9mS1lgstpqjIh69HEoa";
