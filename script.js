@@ -12,7 +12,7 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
     }).then(function(json) {
       console.log(json);
       let backgroundImage = 'url(images/standardbg.jpg)';
-      if (json.cod == '404' || json.data.length === 0) {
+      if (json.cod == '404') {
         document.getElementById("resultDivs").innerHTML = "";
       } else {
 
@@ -25,32 +25,25 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
           }
         }
 
+        let resultDivs = "<div id='parkResult'></div>";
+
         if (infoToDisplay == null) {
-          // say theres no data for this place
+          document.getElementById("resultDivs").innerHTML = resultDivs;
+
+          let results = "";
+          results += '<h2>No results found for:</h2>';
+          results += '<h2>' + value + '</h2>';
+          document.getElementById("parkResult").innerHTML = results;
         } else {
+          // This is where to put json info
           console.log(infoToDisplay.fullName);
+          resultDivs += "<div id='parkInfo'></div>";
+          document.getElementById("resultDivs").innerHTML = resultDivs;
+
+
           backgroundImage = "url(" + infoToDisplay.images[0].url + ")";
+          document.body.style.backgroundImage = backgroundImage;
         }
-
-
-        // let resultDivs = "<div id=\"weatherResults\"></div><div id=\"forecastResults\"></div>";
-        // document.getElementById("resultDivs").innerHTML = resultDivs;
-        //
-        // let results = "";
-        // results += '<h2>Weather in ' + json.name + "</h2>";
-        // for (let i = 0; i < json.weather.length; i++) {
-        //   results += '<img src="http://openweathermap.org/img/w/' + json.weather[i].icon + '.png"/>';
-        // }
-        // results += '<div class = \'info-table\'>'; //Add this div to prevent text aligning with upper image
-        // results += '<div class = \'table-left\'>' + 'Temperature</div><div class = \'table-right\'>' + json.main.temp + " &deg;F</div>";
-        // results += '<div class = \'table-left\'>' + 'Feels Like</div><div class = \'table-right\'>' + json.main.feels_like + " &deg;F</div>";
-        // results += '<div class = \'table-left\'>' + 'Daily High</div><div class = \'table-right\'>' + json.main.temp_max + " &deg;F</div>";
-        // results += '<div class = \'table-left\'>' + 'Daily Low</div><div class = \'table-right\'>' + json.main.temp_min + " &deg;F</div>";
-        // results += '<div class = \'table-left\'>' + 'Humidity</div><div class = \'table-right\'>' + json.main.humidity + "%</div>";
-        // results += '<div class = \'table-left\'>' + 'Wind Speed</div><div class = \'table-right\'>' + json.wind.speed + " mph</div>";
-        // results += '</div>';
-        // document.getElementById("weatherResults").innerHTML = results;
-        document.body.style.backgroundImage = backgroundImage;
       }
 
     });

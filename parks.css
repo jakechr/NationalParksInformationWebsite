@@ -107,7 +107,7 @@ input[type="submit"] {
   min-height: 500px;
 }
 
-#weatherResults {
+#parkResult {
   position: relative;
   display: inline-block;
   margin: 50px auto;
@@ -137,7 +137,7 @@ input[type="submit"] {
   text-align: left;
 }
 
-#forecastResults {
+#parkInfo {
   position: relative;
   display: inline-block;
   margin-bottom: 50px;
