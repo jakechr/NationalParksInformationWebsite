@@ -40,6 +40,9 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
           document.getElementById("resultDivs").innerHTML = resultDivs;
 
           parkResult = '<h2>' + infoToDisplay.fullName + '</h2>';
+          parkResult += '<p>' + infoToDisplay.description + '</p>';
+
+          let parkInfo = '<h2>' + infoToDisplay.fullName + '</h2>';
 
 
           backgroundImage = "url(" + infoToDisplay.images[0].url + ")";

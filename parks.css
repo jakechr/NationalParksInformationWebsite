@@ -211,8 +211,8 @@ input[type="submit"] {
 
   #form-box,
   #weatherResults,
-  #forecastResults {
-    width: auto;
+  #parkResult {
+    max-width: 100%;
   }
 }
 
@@ -221,10 +221,17 @@ input[type="submit"] {
 
   #form-box,
   #weatherResults,
-  #forecastResults {
-    width: auto;
+  #parkResult {
+    max-width: 80%;
   }
 }
 
 /* Desktop Styles */
-@media only screen and (min-width: 961px) {}
+@media only screen and (min-width: 961px) {
+
+  #form-box,
+  #weatherResults,
+  #parkResult {
+    max-width: 50%;
+  }
+}
