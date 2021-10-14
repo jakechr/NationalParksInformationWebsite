@@ -42,7 +42,13 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
           parkResult = '<h2>' + infoToDisplay.fullName + '</h2>';
           parkResult += '<p>' + infoToDisplay.description + '</p>';
 
-          let parkInfo = '<h2>' + infoToDisplay.fullName + '</h2>';
+          let parkInfo = "<div id = 'parkActivities'></div>";
+          parkInfo += "<div id = 'parkPhotos'></div>";
+          parkInfo += "<div id = 'parkEntranceInfo'></div>";
+          parkInfo += "<div id = 'parkWeather'></div>";
+          document.getElementById("parkInfo").innerHTML = parkInfo;
+
+
 
 
           backgroundImage = "url(" + infoToDisplay.images[0].url + ")";
