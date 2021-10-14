@@ -48,6 +48,16 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
           parkInfo += "<div id = 'parkWeather'></div>";
           document.getElementById("parkInfo").innerHTML = parkInfo;
 
+          // Adding images
+          let newDivs = "";
+          for (i = 1; i < 4; i++) {
+            newDivs += "<div class='park-photo-container'><img src='" +
+              infoToDisplay.images[i].url +
+              "'></div>";
+          }
+          console.log(newDivs);
+          document.getElementById("parkPhotos").innerHTML = newDivs;
+
           backgroundImage = "url(" + infoToDisplay.images[0].url + ")";
           document.body.style.backgroundImage = backgroundImage;
         }

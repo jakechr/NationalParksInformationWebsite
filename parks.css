@@ -143,6 +143,22 @@ input[type="submit"] {
   margin-bottom: 50px;
 }
 
+#parkPhotos {
+  display: flex;
+  flex-direction: row;
+}
+
+.park-photo-container {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 20px;
+}
+
+.park-photo-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .day-row {
   display: inline-block;
   width: auto;
