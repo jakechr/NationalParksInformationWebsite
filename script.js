@@ -48,9 +48,6 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
           parkInfo += "<div id = 'parkWeather'></div>";
           document.getElementById("parkInfo").innerHTML = parkInfo;
 
-
-
-
           backgroundImage = "url(" + infoToDisplay.images[0].url + ")";
           document.body.style.backgroundImage = backgroundImage;
         }
