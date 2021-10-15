@@ -146,17 +146,28 @@ input[type="submit"] {
 #parkPhotos {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  margin-bottom: 0px;
 }
 
 .park-photo-container {
-  max-width: 200px;
-  max-height: 200px;
+  display: inline-block;
   margin: 20px;
+  padding: 20px;
+  background: rgb(245, 245, 245);
+  /* The Fallback */
+  background: rgba(245, 245, 245, 0.25);
+  -moz-box-shadow: 0 0 20px black;
+  -webkit-box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px black;
 }
 
 .park-photo-container img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .day-row {
@@ -240,6 +251,12 @@ input[type="submit"] {
   #parkResult {
     max-width: 80%;
   }
+
+  .park-photo-container img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+  }
 }
 
 /* Desktop Styles */
@@ -249,5 +266,15 @@ input[type="submit"] {
   #weatherResults,
   #parkResult {
     max-width: 50%;
+  }
+
+  #parkPhotos {
+    max-width: 90%
+  }
+
+  .park-photo-container img {
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
   }
 }

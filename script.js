@@ -50,7 +50,11 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
 
           // Adding images
           let newDivs = "";
-          for (i = 1; i < 4; i++) {
+          let numPhotos = 3;
+          if (infoToDisplay.images.length < numPhotos) {
+            numPhotos = infoToDisplay.images.length;
+          }
+          for (i = 1; i < numPhotos; i++) {
             newDivs += "<div class='park-photo-container'><img src='" +
               infoToDisplay.images[i].url +
               "'></div>";
