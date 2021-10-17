@@ -1,6 +1,13 @@
-document.getElementById("parkSubmit").addEventListener("click", function(event) {
+let PARK_SUBMIT = "parkSubmit";
+let PARK_INPUT = "parkInput";
+let PARK_RESULT = "parkResult";
+let RESULT_DIVS = "resultDivs";
+let PARK_INFO = "parkInfo";
+
+
+document.getElementById(PARK_SUBMIT).addEventListener("click", function(event) {
   event.preventDefault();
-  const value = document.getElementById("parkInput").value;
+  const value = document.getElementById(PARK_INPUT).value;
   if (value === "")
     return;
   const url = "https://developer.nps.gov/api/v1/parks?limit=40&start=0&q=" + value + "&api_key=DpXaMIhw6NpRLqadO3J0L9mS1lgstpqjIh69HEoa";
@@ -25,19 +32,19 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
           }
         }
 
-        let resultDivs = "<div id='parkResult'></div>";
+        let resultDivs = "<div id='" + PARK_RESULT + "'></div>";
         let parkResult = "";
 
         if (infoToDisplay == null) {
-          document.getElementById("resultDivs").innerHTML = resultDivs;
+          document.getElementById(RESULT_DIVS).innerHTML = resultDivs;
 
           parkResult += '<h2>No results found for:</h2>';
           parkResult += '<h2>' + value + '</h2>';
         } else {
           // This is where to put json info
           console.log(infoToDisplay.fullName);
-          resultDivs += "<div id='parkInfo'></div>";
-          document.getElementById("resultDivs").innerHTML = resultDivs;
+          resultDivs += "<div id='" + PARK_INFO + "'></div>";
+          document.getElementById(RESULT_DIVS).innerHTML = resultDivs;
 
           parkResult = '<h2>' + infoToDisplay.fullName + '</h2>';
           parkResult += '<p>' + infoToDisplay.description + '</p>';
@@ -46,26 +53,31 @@ document.getElementById("parkSubmit").addEventListener("click", function(event) 
           parkInfo += "<div id = 'parkPhotos'></div>";
           parkInfo += "<div id = 'parkEntranceInfo'></div>";
           parkInfo += "<div id = 'parkWeather'></div>";
-          document.getElementById("parkInfo").innerHTML = parkInfo;
+          document.getElementById(PARK_INFO).innerHTML = parkInfo;
 
           // Adding images
-          let newDivs = "";
-          let numPhotos = 3;
+          let newImageDivs = "";
+          let numPhotos = 4;
           if (infoToDisplay.images.length < numPhotos) {
             numPhotos = infoToDisplay.images.length;
           }
           for (i = 1; i < numPhotos; i++) {
-            newDivs += "<div class='park-photo-container'><img src='" +
+            newImageDivs += "<div class='park-photo-container'><img src='" +
               infoToDisplay.images[i].url +
               "'></div>";
           }
-          console.log(newDivs);
-          document.getElementById("parkPhotos").innerHTML = newDivs;
+          console.log(newImageDivs);
+          document.getElementById("parkPhotos").innerHTML = newImageDivs;
+
+          // Adding weather
+          let weatherInfo = "<h3>Weather</h3><p>" + infoToDisplay.weatherInfo + "</p>";
+          document.getElementById("parkWeather").innerHTML = weatherInfo;
+
 
           backgroundImage = "url(" + infoToDisplay.images[0].url + ")";
           document.body.style.backgroundImage = backgroundImage;
         }
-        document.getElementById("parkResult").innerHTML = parkResult;
+        document.getElementById(PARK_RESULT).innerHTML = parkResult;
       }
 
     });
