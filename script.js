@@ -3,6 +3,7 @@ let PARK_INPUT = "parkInput";
 let PARK_RESULT = "parkResult";
 let RESULT_DIVS = "resultDivs";
 let PARK_INFO = "parkInfo";
+let DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 
 document.getElementById(PARK_SUBMIT).addEventListener("click", function(event) {
@@ -55,6 +56,18 @@ document.getElementById(PARK_SUBMIT).addEventListener("click", function(event) {
           parkInfo += "<div id = 'parkWeather'></div>";
           document.getElementById(PARK_INFO).innerHTML = parkInfo;
 
+          // Adding activities
+          let activitiesInfo = "<h3>Available Activities</h3><p>";
+          let activitiesLength = infoToDisplay.activities.length
+          for (i = 0; i < activitiesLength; i++) {
+            activitiesInfo += infoToDisplay.activities[i].name;
+            if (i != activitiesLength - 1) {
+              activitiesInfo += ", ";
+            }
+          }
+          activitiesInfo += "</p>";
+          document.getElementById("parkActivities").innerHTML = activitiesInfo;
+
           // Adding images
           let newImageDivs = "";
           let numPhotos = 4;
@@ -69,9 +82,24 @@ document.getElementById(PARK_SUBMIT).addEventListener("click", function(event) {
           console.log(newImageDivs);
           document.getElementById("parkPhotos").innerHTML = newImageDivs;
 
+          // Adding park entrance info
+          let entranceInfo = "<h3>Entrance Hours</h3>";
+          for (let i = 0; i < DAYS.length; i++) {
+            let currDay = DAYS[i].toLowerCase();
+            let test = infoToDisplay.operatingHours[0].standardHours[currDay];
+            entranceInfo += "<p>" + DAYS[i] + ": " + infoToDisplay.operatingHours[0].standardHours[currDay] + "</p>";
+          }
+          entranceInfo += "<div></div>";
+          document.getElementById("parkEntranceInfo").innerHTML = entranceInfo;
+
+
+
           // Adding weather
           let weatherInfo = "<h3>Weather</h3><p>" + infoToDisplay.weatherInfo + "</p>";
           document.getElementById("parkWeather").innerHTML = weatherInfo;
+
+
+
 
 
           backgroundImage = "url(" + infoToDisplay.images[0].url + ")";
