@@ -107,7 +107,8 @@ input[type="submit"] {
   min-height: 500px;
 }
 
-#parkResult {
+#parkResult,
+#parkWeather {
   position: relative;
   display: inline-block;
   margin: 50px auto;
@@ -119,22 +120,6 @@ input[type="submit"] {
   -moz-box-shadow: 0 0 20px black;
   -webkit-box-shadow: 0 0 20px black;
   box-shadow: 0 0 20px black;
-}
-
-.info-table {
-  max-width: 200px;
-}
-
-.table-left {
-  float: left;
-  width: 60%;
-  text-align: left;
-}
-
-.table-right {
-  float: left;
-  width: 40%;
-  text-align: left;
 }
 
 #parkInfo {
@@ -168,34 +153,6 @@ input[type="submit"] {
   width: 300px;
   height: 200px;
   object-fit: cover;
-}
-
-.day-row {
-  display: inline-block;
-  width: auto;
-  max-width: 90%;
-  margin: 50px auto;
-  margin-bottom: 0;
-  padding: 20px;
-  background: rgb(245, 245, 245);
-  /* The Fallback */
-  background: rgba(245, 245, 245, 0.6);
-  -moz-box-shadow: 0 0 20px black;
-  -webkit-box-shadow: 0 0 20px black;
-  box-shadow: 0 0 20px black;
-}
-
-.day-row-elements-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.day-row-element {
-  width: auto;
-  margin: 10px;
-  padding: 0 5px 0 5px;
 }
 
 .footer {
@@ -238,7 +195,8 @@ input[type="submit"] {
 
   #form-box,
   #weatherResults,
-  #parkResult {
+  #parkResult,
+  #parkWeather {
     max-width: 100%;
   }
 }
@@ -248,7 +206,8 @@ input[type="submit"] {
 
   #form-box,
   #weatherResults,
-  #parkResult {
+  #parkResult,
+  #parkWeather {
     max-width: 80%;
   }
 
@@ -264,7 +223,8 @@ input[type="submit"] {
 
   #form-box,
   #weatherResults,
-  #parkResult {
+  #parkResult,
+  #parkWeather {
     max-width: 50%;
   }
 
