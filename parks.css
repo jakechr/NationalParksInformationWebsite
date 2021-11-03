@@ -108,9 +108,25 @@ input[type="submit"] {
 }
 
 #parkResult,
-#parkWeather {
+#parkWeather,
+#parkActivities {
   position: relative;
   display: inline-block;
+  margin: 50px auto;
+  margin-bottom: 0;
+  padding: 20px;
+  background: rgb(245, 245, 245);
+  /* The Fallback */
+  background: rgba(245, 245, 245, 0.6);
+  -moz-box-shadow: 0 0 20px black;
+  -webkit-box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px black;
+}
+
+#parkEntranceInfo {
+  position: relative;
+  display: list-item;
+  width: 210px;
   margin: 50px auto;
   margin-bottom: 0;
   padding: 20px;
@@ -196,7 +212,9 @@ input[type="submit"] {
   #form-box,
   #weatherResults,
   #parkResult,
-  #parkWeather {
+  #parkWeather,
+  #parkEntranceInfo,
+  #parkActivities {
     max-width: 100%;
   }
 }
@@ -207,7 +225,9 @@ input[type="submit"] {
   #form-box,
   #weatherResults,
   #parkResult,
-  #parkWeather {
+  #parkWeather,
+  #parkEntranceInfo,
+  #parkActivities {
     max-width: 80%;
   }
 
@@ -224,7 +244,9 @@ input[type="submit"] {
   #form-box,
   #weatherResults,
   #parkResult,
-  #parkWeather {
+  #parkWeather,
+  #parkEntranceInfo,
+  #parkActivities {
     max-width: 50%;
   }
 
