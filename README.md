@@ -1,20 +1,19 @@
-# CS260 - Creative Project Repo
-https://www.travelingmitch.com/workwithme
-index: Jake
-- Picture of person
-- About first: General intro to person
-- big recent blog post
+# creative
 
-contact: Stephen
--
+## Project setup
+```
+npm install
+```
 
-blog: Stephen
-- list of the hikes
-- - photo grid w/ pics and descriptions
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-newsletter: Jake
--
+### Compiles and minifies for production
+```
+npm run build
+```
 
-todo together:
-- footer
-- menu
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
