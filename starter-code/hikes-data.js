@@ -38,13 +38,10 @@ let hikes = [
   },
   {
     id: 6,
-    name: "Angel's Landing",
-    location: 'Zion National Park, UT',
-    image: '/images/kanarra_creek.jpg',
-    description:
-      "This was easily one of the most beautiful hikes that I have ever done. \
-    Hiking a slot canyon always feel like a once-of-a-lifetime kind of \
-    experience so slot canyons don't exist everywhere.",
+    name: 'Glacier Hike',
+    location: 'Glacier Bay National Park, AK',
+    image: '/images/glacier.jpg',
+    description: 'Though it was beyond freezing, I SAW A BEAR!!!!',
   },
 ]
 
