@@ -50,9 +50,6 @@ export default {
 };
 </script>
 
-import
-url(//db.onlinewebfonts.com/c/02b0cfe9a43c6fc48f54c9bf6f59dbfb?family=Copyright+Klim+Type+Foundry);
-
 <style>
 @font-face {
   font-family: "Foundry";
