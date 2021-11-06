@@ -25,6 +25,10 @@
 </template>
 
 <style>
+  .navbar.navbar-light.bg-light {
+    background-color: white !important;
+    text-align: left;
+  }
   .navbar-brand {
     padding: 0px;
   }

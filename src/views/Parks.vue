@@ -159,6 +159,17 @@
 </script>
 
 <style>
+  .navbar.navbar-light.bg-light {
+    background-color: white !important;
+    background: rgb(245, 245, 245) !important;
+    /* The Fallback */
+    background: rgba(245, 245, 245, 0.75) !important;
+    -moz-box-shadow: 0 0 20px black;
+    -webkit-box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px black;
+    text-align: left;
+  }
+
   @font-face {
     font-family: "Foundry";
     src: url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.eot");
@@ -210,6 +221,12 @@
     -webkit-box-shadow: 0 0 20px black;
     box-shadow: 0 0 20px black;
     text-align: left;
+  }
+
+  button {
+    background: rgb(255, 255, 255);
+    /* The Fallback */
+    background: rgba(255, 255, 255, 0.3);
   }
 
   .navbar-brand {
