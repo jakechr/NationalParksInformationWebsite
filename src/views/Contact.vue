@@ -30,7 +30,7 @@
 import CustomFooter from "../components/CustomFooter.vue";
 
 export default {
-  name: "Home",
+  name: "Contact",
   components: {
     CustomFooter,
   },
