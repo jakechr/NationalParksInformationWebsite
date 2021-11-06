@@ -101,10 +101,6 @@
     font-family: "Foundry";
   }
 
-  .blog-body-size {
-    width: 90%;
-  }
-
   .main-body {
     display: flex;
     flex-direction: column;
@@ -153,10 +149,6 @@
     max-width: 100%;
   }
 
-  .header-container {
-    text-align: center;
-  }
-
   .main-body-container h2 {
     text-align: center;
   }
@@ -170,12 +162,6 @@
     padding: 20px;
   }
 
-  .main-body-paragraph-container {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-  }
-
   .main-body-image-container,
   .recent-blog-post {
     display: flex;
@@ -186,103 +172,12 @@
     width: 100%;
   }
 
-  .navbar-brand {
-    padding: 0px;
-  }
-
-  .navbar-brand img {
-    height: 65px;
-    padding: 15px;
-    width: auto;
-  }
-
-  .newsletter_banner {
-    width: 100%;
-  }
-
-  .newsletter-intro h1 {
-    text-align: center;
-  }
-
-  .newsletter-invite img {
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-  }
-
-  .email-invite {
-    padding-top: 8px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .email-invite .email-form {
-    width: 60%;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .input-group {
-    justify-content: center;
-  }
-
   .blog-post-logo {
     width: 80%;
     justify-content: center;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .col-sm img {
-    width: 100%;
-  }
-
-  .hike-gridd-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .hike-gridd-item {
-    width: 100%;
-    background-color: #edf4ee;
-    padding: 0;
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
-
-  .hike-gridd-item img {
-    max-width: 100%;
-    height: 280px;
-    object-fit: cover;
-  }
-
-  .github-container {
-    float: left;
-    max-height: 50px;
-    max-width: 100px;
-  }
-
-  .github-container img {
-    width: 100%;
-    height: auto;
-  }
-
-  .github-image {
-    height: 50px;
-  }
-
-  /* Mobile Styles */
-  @media only screen and (max-width: 400px) {
-    .email-invite .email-form {
-      width: 90%;
-    }
   }
 
   /* Tablet Styles */
@@ -292,14 +187,6 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-    }
-
-    .blog-body-size {
-      width: 90%;
-    }
-
-    .email-invite .email-form {
-      width: 70%;
     }
 
     .main-body-size {
@@ -339,36 +226,6 @@
     .most-recent-blog-post-last-item img {
       max-width: 100%;
     }
-
-    .hike-gridd {
-      display: flex;
-      justify-content: center;
-      /* this and next for photos to align and change */
-      flex-wrap: wrap;
-      flex-direction: row;
-      /* flex-direction: column; */
-      align-items: center;
-      /* needed for flex-frection: column; */
-    }
-
-    .hike-gridd-item {
-      width: 300px;
-      background-color: #edf4ee;
-      padding: 10px;
-      margin-right: 15px;
-      margin-bottom: 15px;
-    }
-
-    .hike-gridd-item img {
-      width: 280px;
-      height: 280px;
-      object-fit: cover;
-    }
-
-    .hike-gridd-item p {
-      width: 100%;
-      height: 110px;
-    }
   }
 
   /* Desktop Styles */
@@ -384,10 +241,6 @@
 
     .main-body-size {
       width: 65%;
-    }
-
-    .blog-body-size {
-      width: 80%;
     }
 
     .main-body-container {
@@ -443,36 +296,6 @@
     .most-recent-blog-post-last-item img {
       max-width: 100%;
       min-width: 300px;
-    }
-
-    .hike-gridd {
-      display: flex;
-      justify-content: center;
-      /* this and next for photos to align and change */
-      flex-wrap: wrap;
-      flex-direction: row;
-      /* flex-direction: column; */
-      align-items: center;
-      /* needed for flex-frection: column; */
-    }
-
-    .hike-gridd-item {
-      width: 370px;
-      background-color: #edf4ee;
-      padding: 10px;
-      margin-right: 15px;
-      margin-bottom: 15px;
-    }
-
-    .hike-gridd-item img {
-      width: 350px;
-      height: 350px;
-      object-fit: cover;
-    }
-
-    .hike-gridd-item p {
-      width: 100%;
-      height: 80px;
     }
   }
 </style>

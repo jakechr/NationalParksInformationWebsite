@@ -48,7 +48,6 @@
         ];
 
         const value = this.formdata.parkInput;
-        console.log(value);
         if (value === "") return;
         const url =
           "https://developer.nps.gov/api/v1/parks?limit=40&start=0&q=" +
@@ -60,7 +59,6 @@
             return response.json();
           })
           .then(function (json) {
-            console.log(json);
             let backgroundImage = "url(images/standardbg.jpg)";
             if (json.cod == "404") {
               document.getElementById("resultDivs").innerHTML = "";
@@ -78,7 +76,6 @@
                 }
               }
 
-              console.log(infoToDisplay);
               let resultDivs = "<div id='" + PARK_RESULT + "'></div>";
               let parkResult = "";
 
@@ -89,7 +86,6 @@
                 parkResult += "<h2>" + value + "</h2>";
               } else {
                 // This is where to put json info
-                console.log(infoToDisplay.fullName);
                 resultDivs += "<div id='" + PARK_INFO + "'></div>";
                 document.getElementById(RESULT_DIVS).innerHTML = resultDivs;
 
@@ -127,7 +123,6 @@
                     infoToDisplay.images[i].url +
                     "'></div>";
                 }
-                console.log(newImageDivs);
                 document.getElementById("parkPhotos").innerHTML = newImageDivs;
 
                 // Adding park entrance info

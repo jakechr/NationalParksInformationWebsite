@@ -121,8 +121,8 @@
     font-family: "Foundry";
   }
 
-  .blog-body-size {
-    width: 90%;
+  ul {
+    list-style-type: none;
   }
 
   .main-body {
@@ -130,51 +130,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  .intro-content .intro-text h1 {
-    text-align: center;
-  }
-
-  .intro-content .intro-text p {
-    font-size: large;
-  }
-
-  .intro-content img {
-    max-height: 700px;
-    max-width: 100%;
-    height: auto;
-    width: auto;
-    padding: 0 0 5px 0;
-  }
-
-  .most-recent-blog-post {
-    font-size: large;
-    display: inline-flex;
-    justify-content: center;
-  }
-
-  .most-recent-blog-post-first-item {
-    width: 0;
-    margin: 0;
-  }
-
-  .most-recent-blog-post-first-item img {
-    height: auto;
-  }
-
-  .most-recent-blog-post-last-item {
-    width: 90%;
-    margin-left: 0;
-    align-items: center;
-  }
-
-  .most-recent-blog-post-last-item img {
-    max-width: 100%;
-  }
-
-  .header-container {
-    text-align: center;
   }
 
   .main-body-container h2 {
@@ -196,24 +151,12 @@
     margin: 10px;
   }
 
-  .main-body-image-container,
-  .recent-blog-post {
+  .main-body-image-container {
     display: flex;
   }
 
-  .main-body-image-container,
-  .recent-blog-post img {
+  .main-body-image-container {
     width: 100%;
-  }
-
-  .navbar-brand {
-    padding: 0px;
-  }
-
-  .navbar-brand img {
-    height: 65px;
-    padding: 15px;
-    width: auto;
   }
 
   .newsletter_banner {
@@ -252,55 +195,6 @@
     justify-content: center;
   }
 
-  .blog-post-logo {
-    width: 80%;
-    justify-content: center;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .col-sm img {
-    width: 100%;
-  }
-
-  .hike-gridd-container {
-    display: flex;
-    justify-content: center;
-  }
-
-  .hike-gridd-item {
-    width: 100%;
-    background-color: #edf4ee;
-    padding: 0;
-    margin-right: 0;
-    margin-bottom: 15px;
-  }
-
-  .hike-gridd-item img {
-    max-width: 100%;
-    height: 280px;
-    object-fit: cover;
-  }
-
-  .github-container {
-    float: left;
-    max-height: 50px;
-    max-width: 100px;
-  }
-
-  .github-container img {
-    width: 100%;
-    height: auto;
-  }
-
-  .github-image {
-    height: 50px;
-  }
-
-  .hike-gridd-item .text {
-  }
-
   /* Mobile Styles */
   @media only screen and (max-width: 400px) {
     .email-invite .email-form {
@@ -317,80 +211,12 @@
       justify-content: center;
     }
 
-    .blog-body-size {
-      width: 90%;
-    }
-
     .email-invite .email-form {
       width: 70%;
     }
 
     .main-body-size {
       width: 85%;
-    }
-
-    .intro-content .intro-text h1 {
-      text-align: center;
-    }
-
-    .intro-content img {
-      max-height: 700px;
-      max-width: 100%;
-      height: auto;
-      width: auto;
-      padding: 0 0 5px 0;
-    }
-
-    .most-recent-blog-post-first-item {
-      width: 20%;
-      display: flex;
-      align-self: center;
-      margin: 10px;
-    }
-
-    .most-recent-blog-post-first-item img {
-      height: auto;
-    }
-
-    .most-recent-blog-post-last-item {
-      float: right;
-      width: 70%;
-      margin-left: 10px;
-      align-items: center;
-    }
-
-    .most-recent-blog-post-last-item img {
-      max-width: 100%;
-    }
-
-    .hike-gridd {
-      display: flex;
-      justify-content: center;
-      /* this and next for photos to align and change */
-      flex-wrap: wrap;
-      flex-direction: row;
-      /* flex-direction: column; */
-      align-items: center;
-      /* needed for flex-frection: column; */
-    }
-
-    .hike-gridd-item {
-      width: 300px;
-      background-color: #edf4ee;
-      padding: 10px;
-      margin-right: 15px;
-      margin-bottom: 15px;
-    }
-
-    .hike-gridd-item img {
-      width: 280px;
-      height: 280px;
-      object-fit: cover;
-    }
-
-    .hike-gridd-item p {
-      width: 100%;
-      height: 110px;
     }
   }
 
@@ -409,94 +235,8 @@
       width: 65%;
     }
 
-    .blog-body-size {
-      width: 80%;
-    }
-
     .main-body-container {
       display: block;
-    }
-
-    .intro-content {
-      margin-bottom: 20px;
-    }
-
-    .intro-content img {
-      max-height: 700px;
-      max-width: 70%;
-      height: auto;
-      width: auto;
-      padding: 0 30px 40px 0;
-    }
-
-    .intro-photo {
-      float: left;
-      max-height: 100%;
-      width: 70%;
-      vertical-align: middle;
-    }
-
-    .intro-content .intro-text {
-      padding-top: 0px;
-    }
-
-    .intro-content .intro-text h1 {
-      text-align: center;
-    }
-
-    .most-recent-blog-post-first-item {
-      width: 15%;
-      display: flex;
-      align-self: center;
-      margin: 10px;
-    }
-
-    .most-recent-blog-post-first-item img {
-      height: auto;
-    }
-
-    .most-recent-blog-post-last-item {
-      float: right;
-      max-width: 60%;
-      min-width: 300px;
-      margin-left: 10px;
-      align-items: center;
-    }
-
-    .most-recent-blog-post-last-item img {
-      max-width: 100%;
-      min-width: 300px;
-    }
-
-    .hike-gridd {
-      display: flex;
-      justify-content: center;
-      /* this and next for photos to align and change */
-      flex-wrap: wrap;
-      flex-direction: row;
-      /* flex-direction: column; */
-      align-items: center;
-      /* needed for flex-frection: column; */
-    }
-
-    .hike-gridd-item {
-      width: 370px;
-      background-color: #edf4ee;
-      padding: 10px;
-      margin-right: 15px;
-      margin-bottom: 15px;
-    }
-
-    .hike-gridd-item img {
-      width: 350px;
-      height: 350px;
-      object-fit: cover;
-    }
-
-    .hike-gridd-item p {
-      width: 100%;
-      height: 80px;
-      background-color: ;
     }
   }
 </style>
