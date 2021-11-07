@@ -1,5 +1,5 @@
 <template>
-  <div class="parks">
+  <div id="parks">
     <div id="wrapper">
       <div id="form-box">
         <h1>National Park Info</h1>
@@ -147,7 +147,8 @@
                 document.getElementById("parkWeather").innerHTML = weatherInfo;
 
                 backgroundImage = "url(" + infoToDisplay.images[0].url + ")";
-                document.body.style.backgroundImage = backgroundImage;
+                document.getElementById("parks").style.backgroundImage =
+                  backgroundImage;
               }
               document.getElementById(PARK_RESULT).innerHTML = parkResult;
             }
@@ -158,17 +159,6 @@
 </script>
 
 <style>
-  .navbar.navbar-light.bg-light {
-    background-color: white !important;
-    background: rgb(245, 245, 245) !important;
-    /* The Fallback */
-    background: rgba(245, 245, 245, 0.75) !important;
-    -moz-box-shadow: 0 0 20px black;
-    -webkit-box-shadow: 0 0 20px black;
-    box-shadow: 0 0 20px black;
-    text-align: left;
-  }
-
   * {
     margin: 0;
     padding: 0;
@@ -196,17 +186,6 @@
     height: 100%;
   }
 
-  .navbar {
-    background-color: white;
-    background: rgb(245, 245, 245);
-    /* The Fallback */
-    background: rgba(245, 245, 245, 0.75);
-    -moz-box-shadow: 0 0 20px black;
-    -webkit-box-shadow: 0 0 20px black;
-    box-shadow: 0 0 20px black;
-    text-align: left;
-  }
-
   button {
     background: rgb(255, 255, 255);
     /* The Fallback */
@@ -223,7 +202,7 @@
     width: auto;
   }
 
-  body {
+  #parks {
     /* Location of the image */
     background-image: url(/images/standardbg.jpg);
     /* Image is centered vertically and horizontally at all times */
