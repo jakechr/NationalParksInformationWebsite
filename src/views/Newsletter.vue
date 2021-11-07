@@ -71,15 +71,14 @@
   import CustomFooter from "../components/CustomFooter.vue";
 
   export default {
-    name: "Home",
+    name: "Newsletter",
     components: {
       CustomFooter,
     },
   };
 </script>
 
-<style>
-
+<style scoped>
   * {
     margin: 0;
     padding: 0;

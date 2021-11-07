@@ -18,7 +18,6 @@
 <script>
   // @ is an alias to /src
   import CustomFooter from "../components/CustomFooter.vue";
-  import axios from "axios";
 
   export default {
     name: "Parks",
