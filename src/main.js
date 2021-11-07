@@ -16,5 +16,6 @@ let data = {
 
 new Vue({
   router,
+  data,
   render: (h) => h(App),
 }).$mount("#app");
