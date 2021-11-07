@@ -9,13 +9,12 @@
           <div class="hike-gridd">
             <div v-for="hike in hikes" :key="hike.id" class="hike-gridd-item">
               <div class="hike gridd-item photo">
-                <img src="/images/angels_landing.jpg" alt="Angel's Landing" />
+                <img :src="'' + hike.image" alt="Angel's Landing" />
               </div>
               <div class="hike gridd-item text">
                 <p>
-                  This beautiful location made me believe in angels. I'm frankly
-                  pretty sure that I saw one flying above my head, but I
-                  might've been dehydrated.
+                  {{ hike.location }}
+                  {{ hike.description }}
                 </p>
               </div>
             </div>
@@ -76,3 +75,16 @@
     </div>
   </div>
 </template>
+
+<script>
+import { defineComponent } from "@vue/composition-api";
+
+export default {
+  name: "Blog",
+  computed: {
+    hikes() {
+      return this.$root.$data.hikes;
+    },
+  },
+};
+</script>
