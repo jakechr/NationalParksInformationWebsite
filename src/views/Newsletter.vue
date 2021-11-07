@@ -79,20 +79,6 @@
 </script>
 
 <style>
-  @font-face {
-    font-family: "Foundry";
-    src: url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.eot");
-    src: url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.eot?#iefix")
-        format("embedded-opentype"),
-      url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.woff2")
-        format("woff2"),
-      url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.woff")
-        format("woff"),
-      url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.ttf")
-        format("truetype"),
-      url("//db.onlinewebfonts.com/t/02b0cfe9a43c6fc48f54c9bf6f59dbfb.svg#Copyright Klim Type Foundry")
-        format("svg");
-  }
 
   * {
     margin: 0;
