@@ -204,8 +204,6 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 50px;
 }
 
-.hike-gridd-item .text {}
-
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
   .email-invite .email-form {
@@ -296,7 +294,6 @@ p, h1, h2, h3, h4, h5, h6 {
   .hike-gridd-item p {
     width: 100%;
     height: 110px;
-    background-color:
   }
 }
 
@@ -402,6 +399,5 @@ p, h1, h2, h3, h4, h5, h6 {
   .hike-gridd-item p {
     width: 100%;
     height: 80px;
-    background-color:
   }
 }
