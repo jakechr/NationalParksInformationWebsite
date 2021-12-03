@@ -43,20 +43,20 @@ app.post("/api/hikes/photos", upload.single("photo"), async (req, res) => {
     return res.sendStatus(400);
   }
   res.send({
-    path: "/images/" + req.file.filename,
+    imagePath: "/images/" + req.file.filename,
   });
 });
 
 // Create a new hike item: takes a title and a path to an image.
 app.post("/api/hikes/items", async (req, res) => {
-  const item = new Item({
+  const hike = new Hike({
     title: req.body.title,
-    path: req.body.path,
+    imagePath: req.body.imagePath,
     description: req.body.description,
   });
   try {
-    await item.save();
-    res.send(item);
+    await hike.save();
+    res.send(hike);
   } catch (error) {
     console.log(error);
     res.sendStatus(500);
@@ -66,8 +66,8 @@ app.post("/api/hikes/items", async (req, res) => {
 // Get a list of all of the items in the hikes.
 app.get("/api/hikes/items", async (req, res) => {
   try {
-    let items = await Item.find();
-    res.send(items);
+    let hikes = await Hike.find();
+    res.send(hikes);
   } catch (error) {
     console.log(error);
     res.sendStatus(500);
