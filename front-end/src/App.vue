@@ -16,6 +16,7 @@
             <b-nav-item href="/newsletter">Newsletter</b-nav-item>
             <b-nav-item href="/contact">Contact</b-nav-item>
             <b-nav-item href="/parks">Parks</b-nav-item>
+            <b-nav-item href="/admin">Admin</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -25,37 +26,37 @@
 </template>
 
 <style>
-  .navbar.navbar-light.bg-light {
-    background-color: white !important;
-    text-align: left;
-  }
-  .navbar-brand {
-    padding: 0px;
-  }
+.navbar.navbar-light.bg-light {
+  background-color: white !important;
+  text-align: left;
+}
+.navbar-brand {
+  padding: 0px;
+}
 
-  .navbar-brand img {
-    height: 45px;
-    padding: 5px;
-    width: auto;
-  }
-  #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
+.navbar-brand img {
+  height: 45px;
+  padding: 5px;
+  width: auto;
+}
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
-  #nav {
-    padding: 30px;
-  }
+#nav {
+  padding: 30px;
+}
 
-  #nav a {
-    font-weight: bold;
-    color: #2c3e50;
-  }
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
 
-  #nav a.router-link-exact-active {
-    color: #42b983;
-  }
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>

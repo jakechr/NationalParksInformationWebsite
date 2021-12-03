@@ -1,56 +1,66 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import Contact from '../views/Contact.vue'
-import Newsletter from '../views/Newsletter.vue'
-import Parks from '../views/Parks.vue'
-import Blog from '../views/Blog.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import Home from "../views/Home.vue";
+import Contact from "../views/Contact.vue";
+import Newsletter from "../views/Newsletter.vue";
+import Parks from "../views/Parks.vue";
+import Blog from "../views/Blog.vue";
+import Admin from "../views/Admin.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-const routes = [{
-    path: '/',
-    name: 'Home',
-    component: Home
+const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/blog',
-    name: 'Blog',
+    path: "/blog",
+    name: "Blog",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: Blog
+    component: Blog,
   },
   {
-    path: '/contact',
-    name: 'Contact',
+    path: "/contact",
+    name: "Contact",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: Contact
+    component: Contact,
   },
   {
-    path: '/newsletter',
-    name: 'Newsletter',
+    path: "/newsletter",
+    name: "Newsletter",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: Newsletter
+    component: Newsletter,
   },
   {
-    path: '/parks',
-    name: 'Parks',
+    path: "/parks",
+    name: "Parks",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: Parks
-  }
-]
+    component: Parks,
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Admin,
+  },
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
