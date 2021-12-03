@@ -26,14 +26,14 @@ mongoose.connect("mongodb://localhost:27017/hikes", {
 });
 
 // Create a scheme for items in the hikes: a title and a path to an image.
-const itemSchema = new mongoose.Schema({
+const hikeSchema = new mongoose.Schema({
   title: String,
-  path: String,
+  imagePath: String,
   description: String,
 });
 
 // Create a model for items in the hikes.
-const Item = mongoose.model("Item", itemSchema);
+const Hike = mongoose.model("Hike", hikeSchema);
 
 // Upload a photo. Uses the multer middleware for the upload and then returns
 // the path where the photo is stored in the file system.
