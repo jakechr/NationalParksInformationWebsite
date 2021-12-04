@@ -1,106 +1,53 @@
 <template>
   <div class="admin">
     <h1>The Admin Page!</h1>
-    <div class="form-container">
-      <div class="heading">
-        <h2>Add a hike</h2>
+    <div class="heading">
+      <h2>Add a hike</h2>
+    </div>
+    <div class="add">
+      <div class="form">
+        <input v-model="title" placeholder="Title" />
+        <p></p>
+        <textarea v-model="description" placeholder="Description"></textarea>
+        <p></p>
+        <input type="file" name="photo" @change="fileChanged" />
+        <button @click="upload">Upload</button>
       </div>
-      <div class="add">
-        <div class="form">
-          <input v-model="title" placeholder="Title" />
-          <p></p>
-          <textarea v-model="description" placeholder="Description"></textarea>
-          <p></p>
-          <input type="file" name="photo" @change="fileChanged" />
-          <button @click="upload">Upload</button>
+      <div class="item-display" v-if="addItem">
+        <h2>{{ addItem.title }}</h2>
+        <div class="item-display-image">
+          <img :src="addItem.imagePath" />
         </div>
-        <div class="item-display" v-if="addItem">
-          <h2>{{ addItem.title }}</h2>
-          <div class="item-display-image">
-            <img :src="addItem.imagePath" />
-          </div>
-          <h3>{{ addItem.description }}</h3>
-        </div>
-      </div>
-      <div class="heading">
-        <h2>Edit/Delete a hike</h2>
-      </div>
-      <div class="edit">
-        <div class="form">
-          <input v-model="findTitle" placeholder="Search" />
-          <div class="suggestions" v-if="suggestions.length > 0">
-            <div
-              class="suggestion"
-              v-for="s in suggestions"
-              :key="s.id"
-              @click="selectItem(s)"
-            >
-              {{ s.title }}
-            </div>
-          </div>
-        </div>
-        <div class="upload" v-if="findItem">
-          <input v-model="findItem.title" />
-          <p></p>
-          <textarea v-model="findItem.description" />
-          <p></p>
-          <img :src="findItem.imagePath" />
-        </div>
-        <div class="actions" v-if="findItem">
-          <button @click="deleteItem(findItem)">Delete</button>
-          <button @click="editItem(findItem)">Edit</button>
-        </div>
+        <h3>{{ addItem.description }}</h3>
       </div>
     </div>
-    <div class="form-container">
-      <div class="heading">
-        <h2>Add a hiker</h2>
-      </div>
-      <div class="add">
-        <div class="form">
-          <input v-model="title" placeholder="Title" />
-          <p></p>
-          <textarea v-model="description" placeholder="Description"></textarea>
-          <p></p>
-          <input type="file" name="photo" @change="fileChanged" />
-          <button @click="upload">Upload</button>
-        </div>
-        <div class="item-display" v-if="addItem">
-          <h2>{{ addItem.title }}</h2>
-          <div class="item-display-image">
-            <img :src="addItem.imagePath" />
-          </div>
-          <h3>{{ addItem.description }}</h3>
-        </div>
-      </div>
-      <div class="heading">
-        <h2>Edit/Delete a hiker</h2>
-      </div>
-      <div class="edit">
-        <div class="form">
-          <input v-model="findTitle" placeholder="Search" />
-          <div class="suggestions" v-if="suggestions.length > 0">
-            <div
-              class="suggestion"
-              v-for="s in suggestions"
-              :key="s.id"
-              @click="selectItem(s)"
-            >
-              {{ s.title }}
-            </div>
+    <div class="heading">
+      <h2>Edit/Delete a hike</h2>
+    </div>
+    <div class="edit">
+      <div class="form">
+        <input v-model="findTitle" placeholder="Search" />
+        <div class="suggestions" v-if="suggestions.length > 0">
+          <div
+            class="suggestion"
+            v-for="s in suggestions"
+            :key="s.id"
+            @click="selectItem(s)"
+          >
+            {{ s.title }}
           </div>
         </div>
-        <div class="upload" v-if="findItem">
-          <input v-model="findItem.title" />
-          <p></p>
-          <textarea v-model="findItem.description" />
-          <p></p>
-          <img :src="findItem.imagePath" />
-        </div>
-        <div class="actions" v-if="findItem">
-          <button @click="deleteItem(findItem)">Delete</button>
-          <button @click="editItem(findItem)">Edit</button>
-        </div>
+      </div>
+      <div class="upload" v-if="findItem">
+        <input v-model="findItem.title" />
+        <p></p>
+        <textarea v-model="findItem.description" />
+        <p></p>
+        <img :src="findItem.imagePath" />
+      </div>
+      <div class="actions" v-if="findItem">
+        <button @click="deleteItem(findItem)">Delete</button>
+        <button @click="editItem(findItem)">Edit</button>
       </div>
     </div>
   </div>
@@ -195,12 +142,6 @@ export default {
 </script>
 
 <style scoped>
-.form-container {
-  display: inline-flex;
-  flex-direction: row;
-  margin: 10px;
-}
-
 .item-display {
   height: 250px;
 }
