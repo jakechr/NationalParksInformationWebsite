@@ -1,54 +1,64 @@
 <template>
-  <div class="admin">
-    <h1>The Hiker Admin Page!</h1>
-    <div class="form-container">
-      <div class="heading">
-        <h2>Add a hiker</h2>
-      </div>
-      <div class="add">
-        <div class="form">
-          <input v-model="name" placeholder="Name" />
-          <p></p>
-          <textarea v-model="biography" placeholder="Biography"></textarea>
-          <p></p>
-          <input type="file" name="photo" @change="fileChanged" />
-          <button @click="upload">Upload</button>
+  <div>
+    <div class="content">
+      <div class="admin">
+        <h1>The Hiker Admin Page!</h1>
+        <div class="heading">
+          <h2>Add a hiker</h2>
         </div>
-        <div class="item-display" v-if="addItem">
-          <h2>{{ addItem.name }}</h2>
-          <div class="item-display-image">
-            <img :src="addItem.imagePath" />
+        <div class="add">
+          <div class="form">
+            <div class="form-inputs">
+              <input v-model="name" placeholder="Name" />
+              <p></p>
+              <textarea v-model="biography" placeholder="Biography"></textarea>
+              <p></p>
+            </div>
+            <div class="photo-submit">
+              <input type="file" name="photo" @change="fileChanged" />
+              <button @click="upload">Upload</button>
+            </div>
           </div>
-          <h3>{{ addItem.biography }}</h3>
-        </div>
-      </div>
-      <div class="heading">
-        <h2>Edit/Delete a hiker</h2>
-      </div>
-      <div class="edit">
-        <div class="form">
-          <input v-model="findName" placeholder="Search" />
-          <div class="suggestions" v-if="suggestions.length > 0">
-            <div
-              class="suggestion"
-              v-for="s in suggestions"
-              :key="s.id"
-              @click="selectItem(s)"
-            >
-              {{ s.name }}
+          <div class="item-display" v-if="addItem">
+            <div class="item-display-photo">
+              <img :src="addItem.imagePath" />
+            </div>
+            <div class="item-display-text">
+              <h6>{{ addItem.name }}</h6>
+              <p>
+                {{ addItem.biography }}
+              </p>
             </div>
           </div>
         </div>
-        <div class="upload" v-if="findItem">
-          <input v-model="findItem.name" />
-          <p></p>
-          <textarea v-model="findItem.biography" />
-          <p></p>
-          <img :src="findItem.imagePath" />
+        <div class="heading">
+          <h2>Edit/Delete a hiker</h2>
         </div>
-        <div class="actions" v-if="findItem">
-          <button @click="deleteItem(findItem)">Delete</button>
-          <button @click="editItem(findItem)">Edit</button>
+        <div class="edit">
+          <div class="form">
+            <input v-model="findName" placeholder="Search" />
+            <div class="suggestions" v-if="suggestions.length > 0">
+              <div
+                class="suggestion"
+                v-for="s in suggestions"
+                :key="s.id"
+                @click="selectItem(s)"
+              >
+                {{ s.name }}
+              </div>
+            </div>
+          </div>
+          <div class="upload" v-if="findItem">
+            <input v-model="findItem.name" />
+            <p></p>
+            <textarea v-model="findItem.biography" />
+            <p></p>
+            <img :src="findItem.imagePath" />
+          </div>
+          <div class="actions" v-if="findItem">
+            <button @click="deleteItem(findItem)">Delete</button>
+            <button @click="editItem(findItem)">Edit</button>
+          </div>
         </div>
       </div>
     </div>
@@ -155,11 +165,20 @@ export default {
   overflow: auto;
 }
 .item-display {
-  width: 100%;
   background-color: #edf4ee;
-  padding: 0;
-  margin-right: 0;
+  width: 370px;
+  max-height: 400px;
+  padding: 10px;
   margin-bottom: 15px;
+}
+
+.item-display h6 {
+  font-size: 20px;
+}
+
+.item-display p {
+  font-size: 15px;
+  height: 60px;
 }
 
 .item-display img {
@@ -170,19 +189,6 @@ export default {
 
 button {
   margin-left: 5px;
-}
-.content {
-  padding: 20px 100px;
-  min-height: 500px;
-}
-
-.item-display {
-  height: 250px;
-  min-width: 50%;
-}
-
-.item-display-image img {
-  height: 200px;
 }
 
 .image h2 {
@@ -206,16 +212,7 @@ button {
 .add,
 .edit {
   display: flex;
-}
-
-.circle {
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  padding: 8px;
-  background: #333;
-  color: #fff;
-  text-align: center;
+  flex-direction: column;
 }
 
 /* Form */
@@ -229,19 +226,6 @@ button {
 
 .form {
   margin-right: 50px;
-}
-
-.add.form {
-  margin-right: 50px;
-  display: inline-flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.form-inputs {
-  display: block;
-  float: left;
-  max-width: 50%;
 }
 
 /* Uploaded images */
@@ -269,5 +253,54 @@ button {
 .suggestion:hover {
   background-color: #5bdeff;
   color: #fff;
+}
+.content {
+  padding: 20px 20px;
+  min-height: 500px;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .content {
+    padding: 20px 50px;
+    min-height: 500px;
+  }
+  .add.form {
+    margin-right: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-inputs {
+    display: block;
+    float: left;
+    max-width: 50%;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  .content {
+    padding: 20px 100px;
+    min-height: 500px;
+  }
+  .add.form {
+    margin-right: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-inputs {
+    display: block;
+    float: left;
+    max-width: 50%;
+  }
+  .add,
+  .edit {
+    display: flex;
+    flex-direction: row;
+  }
 }
 </style>

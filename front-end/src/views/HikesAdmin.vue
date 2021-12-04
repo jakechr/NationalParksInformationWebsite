@@ -280,11 +280,6 @@ button {
     float: left;
     max-width: 50%;
   }
-  .add,
-  .edit {
-    display: flex;
-    flex-direction: row;
-  }
 }
 
 /* Desktop Styles */
