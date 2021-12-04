@@ -98,6 +98,7 @@ h6 {
 h6 {
   font-size: 20px;
   font-weight: 700;
+  justify-content: center;
 }
 
 p {
@@ -105,9 +106,12 @@ p {
 }
 
 .hike.gridd-item.text {
+  margin-right: auto;
+  margin-left: auto;
   overflow-wrap: break-word;
   max-width: 400px;
   overflow: auto;
+  justify-content: center;
 }
 
 .blog-body-size {
@@ -160,6 +164,51 @@ p {
 }
 
 /* Tablet Styles */
+@media only screen and (max-width: 400px) {
+  .main-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .blog-body-size {
+    width: 90%;
+  }
+
+  .hike-gridd {
+    display: flex;
+    justify-content: center;
+    /* this and next for photos to align and change */
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* flex-direction: column; */
+    align-items: center;
+    /* needed for flex-frection: column; */
+  }
+
+  .hike-gridd-item {
+    display: block;
+    width: 300px;
+    background-color: #edf4ee;
+    padding: 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+
+  .hike-gridd-item img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .hike-gridd-item p {
+    width: 100%;
+    height: 110px;
+  }
+}
+
+/* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   .main-body {
     display: flex;
@@ -184,7 +233,7 @@ p {
   }
 
   .hike-gridd-item {
-    width: 300px;
+    width: 450px;
     background-color: #edf4ee;
     padding: 10px;
     margin-right: 15px;
@@ -198,7 +247,7 @@ p {
   }
 
   .hike-gridd-item p {
-    width: 100%;
+    width: 140px;
     height: 110px;
   }
 }
