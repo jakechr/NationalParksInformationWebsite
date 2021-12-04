@@ -67,9 +67,13 @@
 
 <script>
 import axios from "axios";
+import CustomFooter from "../components/CustomFooter.vue";
 
 export default {
   name: "Admin",
+  components: {
+    CustomFooter,
+  },
   data() {
     return {
       title: "",
@@ -154,6 +158,9 @@ export default {
 </script>
 
 <style scoped>
+button {
+  margin-left: 5px;
+}
 .content {
   padding: 20px 100px;
   min-height: 500px;
