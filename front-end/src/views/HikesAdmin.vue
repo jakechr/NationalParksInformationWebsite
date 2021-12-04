@@ -193,10 +193,6 @@ export default {
 button {
   margin-left: 5px;
 }
-.content {
-  padding: 20px 100px;
-  min-height: 500px;
-}
 
 .image h2 {
   font-style: italic;
@@ -221,16 +217,6 @@ button {
   display: flex;
 }
 
-.circle {
-  border-radius: 50%;
-  width: 18px;
-  height: 18px;
-  padding: 8px;
-  background: #333;
-  color: #fff;
-  text-align: center;
-}
-
 /* Form */
 input,
 textarea,
@@ -242,19 +228,6 @@ button {
 
 .form {
   margin-right: 50px;
-}
-
-.add.form {
-  margin-right: 50px;
-  display: inline-flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.form-inputs {
-  display: block;
-  float: left;
-  max-width: 50%;
 }
 
 /* Uploaded images */
@@ -282,5 +255,49 @@ button {
 .suggestion:hover {
   background-color: #5bdeff;
   color: #fff;
+}
+.content {
+  padding: 20px 20px;
+  min-height: 500px;
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .content {
+    padding: 20px 50px;
+    min-height: 500px;
+  }
+  .add.form {
+    margin-right: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-inputs {
+    display: block;
+    float: left;
+    max-width: 50%;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  .content {
+    padding: 20px 100px;
+    min-height: 500px;
+  }
+  .add.form {
+    margin-right: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form-inputs {
+    display: block;
+    float: left;
+    max-width: 50%;
+  }
 }
 </style>
