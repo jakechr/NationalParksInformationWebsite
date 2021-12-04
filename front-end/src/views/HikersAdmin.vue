@@ -259,6 +259,13 @@ button {
   min-height: 500px;
 }
 
+.edit .form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 20px;
+}
+
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   .content {

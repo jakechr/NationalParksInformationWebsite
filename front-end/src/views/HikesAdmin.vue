@@ -2,7 +2,7 @@
   <div>
     <div class="content">
       <div class="admin">
-        <h1>Hikes Admin Page</h1>
+        <h1>The Hikes Admin Page!</h1>
         <div class="heading">
           <h2>Add a hike</h2>
         </div>
@@ -260,6 +260,13 @@ button {
 .content {
   padding: 20px 20px;
   min-height: 500px;
+}
+
+.edit .form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 20px;
 }
 
 /* Tablet Styles */
