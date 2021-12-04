@@ -1,61 +1,67 @@
 <template>
-  <div class="content">
-    <div class="admin">
-      <h1>Hikes Admin Page</h1>
-      <div class="heading">
-        <h2>Add a hike</h2>
-      </div>
-      <div class="add">
-        <div class="form">
-          <div class="form-inputs">
-            <input v-model="title" placeholder="Title" />
-            <p></p>
-            <textarea
-              v-model="description"
-              placeholder="Description"
-            ></textarea>
-            <p></p>
-          </div>
-          <div class="photo-submit">
-            <input type="file" name="photo" @change="fileChanged" />
-            <button @click="upload">Upload</button>
-          </div>
+  <div>
+    <div class="content">
+      <div class="admin">
+        <h1>Hikes Admin Page</h1>
+        <div class="heading">
+          <h2>Add a hike</h2>
         </div>
-        <div class="item-display" v-if="addItem">
-          <h2>{{ addItem.title }}</h2>
-          <div class="item-display-image">
-            <img :src="addItem.imagePath" />
+        <div class="add">
+          <div class="form">
+            <div class="form-inputs">
+              <input v-model="title" placeholder="Title" />
+              <p></p>
+              <textarea
+                v-model="description"
+                placeholder="Description"
+              ></textarea>
+              <p></p>
+            </div>
+            <div class="photo-submit">
+              <input type="file" name="photo" @change="fileChanged" />
+              <button @click="upload">Upload</button>
+            </div>
           </div>
-          <h3>{{ addItem.description }}</h3>
-        </div>
-      </div>
-      <div class="heading">
-        <h2>Edit/Delete a hike</h2>
-      </div>
-      <div class="edit">
-        <div class="form">
-          <input v-model="findTitle" placeholder="Search" />
-          <div class="suggestions" v-if="suggestions.length > 0">
-            <div
-              class="suggestion"
-              v-for="s in suggestions"
-              :key="s.id"
-              @click="selectItem(s)"
-            >
-              {{ s.title }}
+          <div class="item-display" v-if="addItem">
+            <div class="item-display-photo">
+              <img :src="addItem.imagePath" />
+            </div>
+            <div class="item-display-text">
+              <h6>{{ addItem.title }}</h6>
+              <p>
+                {{ addItem.description }}
+              </p>
             </div>
           </div>
         </div>
-        <div class="upload" v-if="findItem">
-          <input v-model="findItem.title" />
-          <p></p>
-          <textarea v-model="findItem.description" />
-          <p></p>
-          <img :src="findItem.imagePath" />
+        <div class="heading">
+          <h2>Edit/Delete a hike</h2>
         </div>
-        <div class="actions" v-if="findItem">
-          <button @click="deleteItem(findItem)">Delete</button>
-          <button @click="editItem(findItem)">Edit</button>
+        <div class="edit">
+          <div class="form">
+            <input v-model="findTitle" placeholder="Search" />
+            <div class="suggestions" v-if="suggestions.length > 0">
+              <div
+                class="suggestion"
+                v-for="s in suggestions"
+                :key="s.id"
+                @click="selectItem(s)"
+              >
+                {{ s.title }}
+              </div>
+            </div>
+          </div>
+          <div class="upload" v-if="findItem">
+            <input v-model="findItem.title" />
+            <p></p>
+            <textarea v-model="findItem.description" />
+            <p></p>
+            <img :src="findItem.imagePath" />
+          </div>
+          <div class="actions" v-if="findItem">
+            <button @click="deleteItem(findItem)">Delete</button>
+            <button @click="editItem(findItem)">Edit</button>
+          </div>
         </div>
       </div>
     </div>
@@ -157,6 +163,27 @@ export default {
 </script>
 
 <style scoped>
+.item-display-text {
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+.item-display {
+  width: 100%;
+  background-color: #edf4ee;
+  padding: 0;
+  margin-right: 0;
+  margin-bottom: 15px;
+}
+
+.item-display img {
+  max-width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+button {
+  margin-left: 5px;
+}
 .content {
   padding: 20px 100px;
   min-height: 500px;
@@ -164,6 +191,7 @@ export default {
 
 .item-display {
   height: 250px;
+  min-width: 50%;
 }
 
 .item-display-image img {
@@ -242,7 +270,7 @@ button {
 /* Suggestions */
 .suggestions {
   width: 200px;
-  border: 100px solid #ccc;
+  border: 2px solid #ccc;
   justify-content: center;
   justify-items: center;
 }
