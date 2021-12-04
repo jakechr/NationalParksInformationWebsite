@@ -17,7 +17,6 @@
             <b-nav-item href="/newsletter">Newsletter</b-nav-item>
             <b-nav-item href="/contact">Contact</b-nav-item>
             <b-nav-item href="/parks">Parks</b-nav-item>
-            <b-nav-item href="/admin">Admin</b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
