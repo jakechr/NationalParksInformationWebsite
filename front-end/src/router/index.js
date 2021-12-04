@@ -5,7 +5,8 @@ import Contact from "../views/Contact.vue";
 import Newsletter from "../views/Newsletter.vue";
 import Parks from "../views/Parks.vue";
 import Blog from "../views/Blog.vue";
-import Admin from "../views/Admin.vue";
+import HikesAdmin from "../views/HikesAdmin.vue";
+import HikersAdmin from "../views/HikersAdmin.vue";
 import NewBlog from "../views/newBlog.vue";
 
 Vue.use(VueRouter);
@@ -49,12 +50,20 @@ const routes = [
     component: Parks,
   },
   {
-    path: "/admin",
-    name: "Admin",
+    path: "/hikesAdmin",
+    name: "HikesAdmin",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: Admin,
+    component: HikesAdmin,
+  },
+  {
+    path: "/hikersAdmin",
+    name: "HikersAdmin",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: HikersAdmin,
   },
   {
     path: "/newBlog",
