@@ -194,7 +194,6 @@ export default {
 };
 </script>
 
-
 <style scoped>
 .form-container {
   display: inline-flex;
@@ -281,4 +280,3 @@ button {
   color: #fff;
 }
 </style>
-

@@ -32,12 +32,31 @@ const hikeSchema = new mongoose.Schema({
   description: String,
 });
 
-// Create a model for items in the hikes.
+const hikerSchema = new mongoose.Schema({
+  name: String,
+  imagePath: String,
+  biography: String,
+});
+
+// Create a model for items in the hikes and hikers.
 const Hike = mongoose.model("Hike", hikeSchema);
+const Hiker = mongoose.model("Hiker", hikerSchema);
 
 // Upload a photo. Uses the multer middleware for the upload and then returns
 // the path where the photo is stored in the file system.
 app.post("/api/hikes/photos", upload.single("photo"), async (req, res) => {
+  // Just a safety check
+  if (!req.file) {
+    return res.sendStatus(400);
+  }
+  res.send({
+    imagePath: "/images/" + req.file.filename,
+  });
+});
+
+// Upload a photo. Uses the multer middleware for the upload and then returns
+// the path where the photo is stored in the file system.
+app.post("/api/hikers/photos", upload.single("photo"), async (req, res) => {
   // Just a safety check
   if (!req.file) {
     return res.sendStatus(400);
@@ -63,11 +82,38 @@ app.post("/api/hikes/items", async (req, res) => {
   }
 });
 
+// Create a new hiker item: takes a title and a path to an image.
+app.post("/api/hikers/items", async (req, res) => {
+  const hiker = new Hiker({
+    name: req.body.name,
+    imagePath: req.body.imagePath,
+    biography: req.body.biography,
+  });
+  try {
+    await hiker.save();
+    res.send(hiker);
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+});
+
 // Get a list of all of the items in the hikes.
 app.get("/api/hikes/items", async (req, res) => {
   try {
     let hikes = await Hike.find();
     res.send(hikes);
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+});
+
+// Get a list of all of the items in the hikes.
+app.get("/api/hikers/items", async (req, res) => {
+  try {
+    let hikers = await Hiker.find();
+    res.send(hikers);
   } catch (error) {
     console.log(error);
     res.sendStatus(500);
@@ -88,6 +134,20 @@ app.delete("/api/hikes/items/:id", async (req, res) => {
   }
 });
 
+// Done in class
+app.delete("/api/hikers/items/:id", async (req, res) => {
+  try {
+    console.log("Delete " + req.params.id);
+    await Hiker.deleteOne({
+      _id: req.params.id,
+    });
+    res.sendStatus(200);
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+});
+
 app.put("/api/hikes/items/:id", async (req, res) => {
   try {
     console.log(req.body);
@@ -98,6 +158,23 @@ app.put("/api/hikes/items/:id", async (req, res) => {
     hike.title = req.body.title;
     hike.description = req.body.description;
     await hike.save();
+    res.sendStatus(200);
+  } catch (error) {
+    console.log(error);
+    res.sendStatus(500);
+  }
+});
+
+app.put("/api/hikers/items/:id", async (req, res) => {
+  try {
+    console.log(req.body);
+    console.log("Edit " + req.params.id);
+    let hiker = await Hiker.findOne({
+      _id: req.params.id,
+    });
+    hiker.name = req.body.name;
+    hiker.biography = req.body.biography;
+    await hiker.save();
     res.sendStatus(200);
   } catch (error) {
     console.log(error);
