@@ -38,19 +38,13 @@
           </ul>
         </div>
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h6 class="text-uppercase font-weight-bold mb-4">Favorite Hikes</h6>
+          <h6 class="text-uppercase font-weight-bold mb-4">Admin Pages</h6>
           <ul class="list-unstyled mb-0">
             <li class="mb-2">
-              <a href="blog.html" class="text-muted">Angel's Landing</a>
+              <a href="/hikesAdmin" class="text-muted">Hikes Admin</a>
             </li>
             <li class="mb-2">
-              <a href="blog.html" class="text-muted">Delicate Arch</a>
-            </li>
-            <li class="mb-2">
-              <a href="blog.html" class="text-muted">Kanarra Creek</a>
-            </li>
-            <li class="mb-2">
-              <a href="blog.html" class="text-muted">Primrose Overlook</a>
+              <a href="/hikersAdmin" class="text-muted">Hikers Admin</a>
             </li>
           </ul>
         </div>
