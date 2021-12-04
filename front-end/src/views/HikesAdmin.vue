@@ -23,11 +23,15 @@
             </div>
           </div>
           <div class="item-display" v-if="addItem">
-            <h2>{{ addItem.title }}</h2>
-            <div class="item-display-image">
+            <div class="item-display-photo">
               <img :src="addItem.imagePath" />
             </div>
-            <h3>{{ addItem.description }}</h3>
+            <div class="item-display-text">
+              <h6>{{ addItem.title }}</h6>
+              <p>
+                {{ addItem.description }}
+              </p>
+            </div>
           </div>
         </div>
         <div class="heading">
@@ -158,6 +162,24 @@ export default {
 </script>
 
 <style scoped>
+.item-display-text {
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+.item-display {
+  width: 100%;
+  background-color: #edf4ee;
+  padding: 0;
+  margin-right: 0;
+  margin-bottom: 15px;
+}
+
+.item-display img {
+  max-width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
 button {
   margin-left: 5px;
 }
