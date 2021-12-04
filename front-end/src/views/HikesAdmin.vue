@@ -165,12 +165,12 @@ export default {
 <style scoped>
 .item-display-text {
   overflow-wrap: break-word;
-  overflow: auto;
+  overflow: hidden;
 }
 .item-display {
   background-color: #edf4ee;
   width: 370px;
-  height: 350px;
+  max-height: 400px;
   padding: 10px;
   margin-bottom: 15px;
 }
