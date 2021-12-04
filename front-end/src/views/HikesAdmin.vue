@@ -1,64 +1,67 @@
 <template>
-  <div class="content">
-    <div class="admin">
-      <h1>Hikes Admin Page</h1>
-      <div class="heading">
-        <h2>Add a hike</h2>
-      </div>
-      <div class="add">
-        <div class="form">
-          <div class="form-inputs">
-            <input v-model="title" placeholder="Title" />
-            <p></p>
-            <textarea
-              v-model="description"
-              placeholder="Description"
-            ></textarea>
-            <p></p>
-          </div>
-          <div class="photo-submit">
-            <input type="file" name="photo" @change="fileChanged" />
-            <button @click="upload">Upload</button>
-          </div>
+  <div>
+    <div class="content">
+      <div class="admin">
+        <h1>Hikes Admin Page</h1>
+        <div class="heading">
+          <h2>Add a hike</h2>
         </div>
-        <div class="item-display" v-if="addItem">
-          <h2>{{ addItem.title }}</h2>
-          <div class="item-display-image">
-            <img :src="addItem.imagePath" />
-          </div>
-          <h3>{{ addItem.description }}</h3>
-        </div>
-      </div>
-      <div class="heading">
-        <h2>Edit/Delete a hike</h2>
-      </div>
-      <div class="edit">
-        <div class="form">
-          <input v-model="findTitle" placeholder="Search" />
-          <div class="suggestions" v-if="suggestions.length > 0">
-            <div
-              class="suggestion"
-              v-for="s in suggestions"
-              :key="s.id"
-              @click="selectItem(s)"
-            >
-              {{ s.title }}
+        <div class="add">
+          <div class="form">
+            <div class="form-inputs">
+              <input v-model="title" placeholder="Title" />
+              <p></p>
+              <textarea
+                v-model="description"
+                placeholder="Description"
+              ></textarea>
+              <p></p>
+            </div>
+            <div class="photo-submit">
+              <input type="file" name="photo" @change="fileChanged" />
+              <button @click="upload">Upload</button>
             </div>
           </div>
+          <div class="item-display" v-if="addItem">
+            <h2>{{ addItem.title }}</h2>
+            <div class="item-display-image">
+              <img :src="addItem.imagePath" />
+            </div>
+            <h3>{{ addItem.description }}</h3>
+          </div>
         </div>
-        <div class="upload" v-if="findItem">
-          <input v-model="findItem.title" />
-          <p></p>
-          <textarea v-model="findItem.description" />
-          <p></p>
-          <img :src="findItem.imagePath" />
+        <div class="heading">
+          <h2>Edit/Delete a hike</h2>
         </div>
-        <div class="actions" v-if="findItem">
-          <button @click="deleteItem(findItem)">Delete</button>
-          <button @click="editItem(findItem)">Edit</button>
+        <div class="edit">
+          <div class="form">
+            <input v-model="findTitle" placeholder="Search" />
+            <div class="suggestions" v-if="suggestions.length > 0">
+              <div
+                class="suggestion"
+                v-for="s in suggestions"
+                :key="s.id"
+                @click="selectItem(s)"
+              >
+                {{ s.title }}
+              </div>
+            </div>
+          </div>
+          <div class="upload" v-if="findItem">
+            <input v-model="findItem.title" />
+            <p></p>
+            <textarea v-model="findItem.description" />
+            <p></p>
+            <img :src="findItem.imagePath" />
+          </div>
+          <div class="actions" v-if="findItem">
+            <button @click="deleteItem(findItem)">Delete</button>
+            <button @click="editItem(findItem)">Edit</button>
+          </div>
         </div>
       </div>
     </div>
+    <custom-footer />
   </div>
 </template>
 
@@ -158,6 +161,7 @@ export default {
 
 .item-display {
   height: 250px;
+  min-width: 50%;
 }
 
 .item-display-image img {
@@ -236,7 +240,7 @@ button {
 /* Suggestions */
 .suggestions {
   width: 200px;
-  border: 100px solid #ccc;
+  border: 2px solid #ccc;
   justify-content: center;
   justify-items: center;
 }
