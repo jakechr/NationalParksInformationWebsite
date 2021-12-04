@@ -78,7 +78,7 @@ app.get("/api/hikes/items", async (req, res) => {
 app.delete("/api/hikes/items/:id", async (req, res) => {
   try {
     console.log("Delete " + req.params.id);
-    await Item.deleteOne({
+    await Hike.deleteOne({
       _id: req.params.id,
     });
     res.sendStatus(200);
@@ -92,12 +92,12 @@ app.put("/api/hikes/items/:id", async (req, res) => {
   try {
     console.log(req.body);
     console.log("Edit " + req.params.id);
-    let item = await Item.findOne({
+    let hike = await Hike.findOne({
       _id: req.params.id,
     });
-    item.title = req.body.title;
-    item.description = req.body.description;
-    await item.save();
+    hike.title = req.body.title;
+    hike.description = req.body.description;
+    await hike.save();
     res.sendStatus(200);
   } catch (error) {
     console.log(error);
@@ -105,4 +105,4 @@ app.put("/api/hikes/items/:id", async (req, res) => {
   }
 });
 
-app.listen(3000, () => console.log("Server listening on port 3000!"));
+app.listen(3030, () => console.log("Server listening on port 3030!"));
