@@ -1,43 +1,63 @@
 <template>
-  <div class="main-body">
-    <div class="blog-body-size">
-      <div class="main-body-container">
-        <div class="header-container">
-          <h1>My Hikes</h1>
-        </div>
-        <div class="hike-gridd-container">
-          <div class="hike-gridd">
-            <div v-for="hike in hikes" :key="hike.id" class="hike-gridd-item">
-              <div class="photo">
-                <img :src="'' + hike.image" :alt="hike.name" />
-              </div>
-              <div class="hike gridd-item text">
-                <h6>{{ hike.name }}</h6>
-                <p>
-                  {{ hike.description }}
-                </p>
+  <div class="NewBlog">
+    <div class="main-body">
+      <div class="blog-body-size">
+        <div class="main-body-container">
+          <div class="header-container">
+            <h1>My Hikes</h1>
+          </div>
+          <div class="hike-gridd-container">
+            <div class="hike-gridd">
+              <div v-for="hike in hikes" :key="hike.id" class="hike-gridd-item">
+                <div class="photo">
+                  <img :src="'' + hike.imagePath" :alt="hike.title" />
+                </div>
+                <div class="hike gridd-item text">
+                  <h6>{{ hike.title }}</h6>
+                  <p>
+                    {{ hike.description }}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <custom-footer />
     </div>
-    <custom-footer />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import CustomFooter from "../components/CustomFooter.vue";
+import axios from "axios";
 
 export default {
-  name: "Blog",
+  name: "NewBlog",
   components: {
     CustomFooter,
   },
-  computed: {
-    hikes() {
-      return this.$root.$data.hikes;
+  data() {
+    return {
+      hikes: [],
+    };
+  },
+  created() {
+    this.getItems();
+  },
+  methods: {
+    async getItems() {
+      try {
+        console.log("here");
+        let response = await axios.get("/api/hikes/items");
+        this.hikes = response.data;
+        console.log(hikes);
+        return true;
+      } catch (error) {
+        console.log("in error");
+        console.log(error);
+      }
     },
   },
 };

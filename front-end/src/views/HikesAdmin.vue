@@ -165,14 +165,22 @@ export default {
 <style scoped>
 .item-display-text {
   overflow-wrap: break-word;
-  overflow: auto;
+  overflow: hidden;
 }
 .item-display {
-  width: 100%;
   background-color: #edf4ee;
-  padding: 0;
-  margin-right: 0;
+  width: 370px;
+  max-height: 400px;
+  padding: 10px;
   margin-bottom: 15px;
+}
+
+.item-display h6 {
+  font-size: 20px;
+}
+
+.item-display p {
+  font-size: 15px;
 }
 
 .item-display img {
@@ -187,15 +195,6 @@ button {
 .content {
   padding: 20px 100px;
   min-height: 500px;
-}
-
-.item-display {
-  height: 250px;
-  min-width: 50%;
-}
-
-.item-display-image img {
-  height: 200px;
 }
 
 .image h2 {
