@@ -94,9 +94,10 @@ export default {
         let r1 = await axios.post("/api/hikes/photos", formData);
         let r2 = await axios.post("/api/hikes/items", {
           title: this.title,
-          imagePath: r1.data.path,
+          imagePath: r1.data.imagePath,
           description: this.description,
         });
+        console.log(r2);
         this.addItem = r2.data;
       } catch (error) {
         console.log(error);
