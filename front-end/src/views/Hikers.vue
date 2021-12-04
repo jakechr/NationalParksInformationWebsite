@@ -106,6 +106,7 @@ p {
 
 .hike.gridd-item.text {
   overflow-wrap: break-word;
+  max-width: 400px;
   overflow: auto;
 }
 
@@ -183,7 +184,7 @@ p {
   }
 
   .hike-gridd-item {
-    width: 600px;
+    width: 300px;
     background-color: #edf4ee;
     padding: 10px;
     margin-right: 15px;
@@ -226,14 +227,14 @@ p {
     justify-content: center;
     /* this and next for photos to align and change */
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     /* flex-direction: column; */
     align-items: center;
     /* needed for flex-frection: column; */
   }
 
   .hike-gridd-item {
-    width: 750px;
+    width: 800px;
     background-color: #edf4ee;
     padding: 10px;
     margin-right: 15px;
@@ -241,7 +242,7 @@ p {
   }
 
   .hike-gridd-item img {
-    width: 350px;
+    width: 400px;
     height: 350px;
     object-fit: cover;
   }

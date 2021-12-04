@@ -150,6 +150,27 @@ export default {
 </script>
 
 <style scoped>
+.item-display-text {
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+.item-display {
+  width: 100%;
+  background-color: #edf4ee;
+  padding: 0;
+  margin-right: 0;
+  margin-bottom: 15px;
+}
+
+.item-display img {
+  max-width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+button {
+  margin-left: 5px;
+}
 .content {
   padding: 20px 100px;
   min-height: 500px;
@@ -157,6 +178,7 @@ export default {
 
 .item-display {
   height: 250px;
+  min-width: 50%;
 }
 
 .item-display-image img {
@@ -235,7 +257,7 @@ button {
 /* Suggestions */
 .suggestions {
   width: 200px;
-  border: 100px solid #ccc;
+  border: 2px solid #ccc;
   justify-content: center;
   justify-items: center;
 }
