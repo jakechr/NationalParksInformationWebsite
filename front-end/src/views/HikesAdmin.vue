@@ -165,7 +165,7 @@ export default {
 <style scoped>
 .item-display-text {
   overflow-wrap: break-word;
-  overflow: hidden;
+  overflow: auto;
 }
 .item-display {
   background-color: #edf4ee;
@@ -181,6 +181,7 @@ export default {
 
 .item-display p {
   font-size: 15px;
+  height: 60px;
 }
 
 .item-display img {

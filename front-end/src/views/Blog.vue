@@ -1,5 +1,5 @@
 <template>
-  <div class="NewBlog">
+  <div class="Blog">
     <div class="main-body">
       <div class="blog-body-size">
         <div class="main-body-container">
@@ -23,8 +23,8 @@
           </div>
         </div>
       </div>
-      <custom-footer />
     </div>
+    <custom-footer />
   </div>
 </template>
 
@@ -34,7 +34,7 @@ import CustomFooter from "../components/CustomFooter.vue";
 import axios from "axios";
 
 export default {
-  name: "NewBlog",
+  name: "Blog",
   components: {
     CustomFooter,
   },
