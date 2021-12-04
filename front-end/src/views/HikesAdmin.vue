@@ -215,6 +215,7 @@ button {
 .add,
 .edit {
   display: flex;
+  flex-direction: column;
 }
 
 /* Form */
