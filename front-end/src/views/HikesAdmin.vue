@@ -150,7 +150,6 @@ export default {
 };
 </script>
 
-
 <style scoped>
 .content {
   padding: 20px 100px;
@@ -251,4 +250,3 @@ button {
   color: #fff;
 }
 </style>
-
