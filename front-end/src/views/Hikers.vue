@@ -27,8 +27,8 @@
           </div>
         </div>
       </div>
-      <custom-footer />
     </div>
+    <custom-footer />
   </div>
 </template>
 
