@@ -1,31 +1,31 @@
 <template>
-<div class="NewBlog">
-  <div class="main-body">
-    <div class="blog-body-size">
-      <div class="main-body-container">
-        <div class="header-container">
-          <h1>My Hikes</h1>
-        </div>
-        <div class="hike-gridd-container">
-          <div class="hike-gridd">
-            <div v-for="hike in hikes" :key="hike.id" class="hike-gridd-item">
-              <div class="photo">
-                <img :src="'' + hike.imagePath" :alt="hike.title" />
-              </div>
-              <div class="hike gridd-item text">
-                <h6>{{ hike.title }}</h6>
-                <p>
-                  {{ hike.description }}
-                </p>
+  <div class="NewBlog">
+    <div class="main-body">
+      <div class="blog-body-size">
+        <div class="main-body-container">
+          <div class="header-container">
+            <h1>My Hikes</h1>
+          </div>
+          <div class="hike-gridd-container">
+            <div class="hike-gridd">
+              <div v-for="hike in hikes" :key="hike.id" class="hike-gridd-item">
+                <div class="photo">
+                  <img :src="'' + hike.imagePath" :alt="hike.title" />
+                </div>
+                <div class="hike gridd-item text">
+                  <h6>{{ hike.title }}</h6>
+                  <p>
+                    {{ hike.description }}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <custom-footer />
     </div>
-    <custom-footer />
   </div>
-</div>
 </template>
 
 <script>
@@ -55,7 +55,7 @@ export default {
         console.log(hikes);
         return true;
       } catch (error) {
-	console.log("in error");
+        console.log("in error");
         console.log(error);
       }
     },
@@ -91,6 +91,19 @@ h6 {
   font-family: "Foundry";
 }
 
+h6 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 15px;
+}
+
+.hike.gridd-item.text {
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+
 .blog-body-size {
   width: 90%;
 }
@@ -104,6 +117,7 @@ h6 {
 
 .header-container {
   text-align: center;
+  padding: 10px;
 }
 
 .main-body-container h2 {

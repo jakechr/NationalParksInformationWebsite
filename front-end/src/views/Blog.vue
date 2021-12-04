@@ -71,6 +71,19 @@ h6 {
   font-family: "Foundry";
 }
 
+h6 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 15px;
+}
+
+.hike.gridd-item.text {
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+
 .blog-body-size {
   width: 90%;
 }
@@ -84,6 +97,7 @@ h6 {
 
 .header-container {
   text-align: center;
+  padding: 10px;
 }
 
 .main-body-container h2 {

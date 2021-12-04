@@ -34,7 +34,7 @@ let hikes = [
     description:
       "When I reached the arch, a small boy trying to climb \
     it until his parents noticed. It's definitely delicate. \
-    That 45 pound boy made it shake and almost made it come crashing down.",
+    That 45 pound boy made it shake and almost made it come crashing down. I'm now making this text insanely long so that I can test some things woohoo. I wonder if this will cut off?",
   },
   {
     id: 6,
