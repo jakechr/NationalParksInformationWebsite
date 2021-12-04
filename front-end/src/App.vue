@@ -12,7 +12,8 @@
         <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav>
             <b-nav-item href="/">Home</b-nav-item>
-            <b-nav-item href="/blog">Blog</b-nav-item>
+            <b-nav-item href="/blog">Old Blog</b-nav-item>
+            <b-nav-item href="/newBlog">New Blog</b-nav-item>
             <b-nav-item href="/newsletter">Newsletter</b-nav-item>
             <b-nav-item href="/contact">Contact</b-nav-item>
             <b-nav-item href="/parks">Parks</b-nav-item>
