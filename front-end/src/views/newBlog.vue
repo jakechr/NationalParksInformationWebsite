@@ -1,4 +1,5 @@
 <template>
+<div class="NewBlog">
   <div class="main-body">
     <div class="blog-body-size">
       <div class="main-body-container">
@@ -9,10 +10,10 @@
           <div class="hike-gridd">
             <div v-for="hike in hikes" :key="hike.id" class="hike-gridd-item">
               <div class="photo">
-                <img :src="'' + hike.image" :alt="hike.name" />
+                <img :src="'' + hike.imagePath" :alt="hike.title" />
               </div>
               <div class="hike gridd-item text">
-                <h6>{{ hike.name }}</h6>
+                <h6>{{ hike.title }}</h6>
                 <p>
                   {{ hike.description }}
                 </p>
@@ -24,6 +25,7 @@
     </div>
     <custom-footer />
   </div>
+</div>
 </template>
 
 <script>
@@ -32,7 +34,7 @@ import CustomFooter from "../components/CustomFooter.vue";
 import axios from "axios";
 
 export default {
-  name: "Blog",
+  name: "NewBlog",
   components: {
     CustomFooter,
   },
@@ -47,11 +49,13 @@ export default {
   methods: {
     async getItems() {
       try {
+        console.log("here");
         let response = await axios.get("/api/hikes/items");
         this.hikes = response.data;
         console.log(hikes);
         return true;
       } catch (error) {
+	console.log("in error");
         console.log(error);
       }
     },

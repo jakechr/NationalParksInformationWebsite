@@ -57,7 +57,7 @@ const routes = [
     component: Admin,
   },
   {
-    path: "/newBlg",
+    path: "/newBlog",
     name: "newBlog",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
