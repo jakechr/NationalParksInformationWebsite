@@ -167,10 +167,10 @@ export default {
   overflow: auto;
 }
 .item-display {
-  width: 100%;
   background-color: #edf4ee;
-  padding: 0;
-  margin-right: 0;
+  width: 370px;
+  height: 350px;
+  padding: 10px;
   margin-bottom: 15px;
 }
 
