@@ -8,6 +8,7 @@ import Blog from "../views/Blog.vue";
 import HikesAdmin from "../views/HikesAdmin.vue";
 import HikersAdmin from "../views/HikersAdmin.vue";
 import NewBlog from "../views/newBlog.vue";
+import Hikers from "../views/Hikers.vue";
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,14 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: Blog,
+  },
+  {
+    path: "/hikers",
+    name: "Hikers",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Hikers,
   },
   {
     path: "/contact",
