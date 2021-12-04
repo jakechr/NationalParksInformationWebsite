@@ -181,6 +181,7 @@ export default {
 
 .item-display p {
   font-size: 15px;
+  height: 60px;
 }
 
 .item-display img {
