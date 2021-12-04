@@ -188,15 +188,6 @@ button {
   min-height: 500px;
 }
 
-.item-display {
-  height: 250px;
-  min-width: 50%;
-}
-
-.item-display-image img {
-  height: 200px;
-}
-
 .image h2 {
   font-style: italic;
   font-size: 1em;
