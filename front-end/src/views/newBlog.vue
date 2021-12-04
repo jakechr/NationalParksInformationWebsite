@@ -49,6 +49,7 @@ export default {
       try {
         let response = await axios.get("/api/hikes/items");
         this.hikes = response.data;
+        console.log(hikes);
         return true;
       } catch (error) {
         console.log(error);
