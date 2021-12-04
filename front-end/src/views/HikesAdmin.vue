@@ -59,14 +59,19 @@
         </div>
       </div>
     </div>
+    <custom-footer />
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import CustomFooter from "../components/CustomFooter.vue";
 
 export default {
   name: "Admin",
+  components: {
+    CustomFooter,
+  },
   data() {
     return {
       title: "",
@@ -106,6 +111,7 @@ export default {
         });
         console.log(r2);
         this.addItem = r2.data;
+        this.getItems();
       } catch (error) {
         console.log(error);
       }
