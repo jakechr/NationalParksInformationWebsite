@@ -175,6 +175,14 @@ export default {
   margin-bottom: 15px;
 }
 
+.item-display h6 {
+  font-size: 20px;
+}
+
+.item-display p {
+  font-size: 15px;
+}
+
 .item-display img {
   max-width: 100%;
   height: 280px;
