@@ -97,6 +97,7 @@ h6 {
 
 h6 {
   font-size: 20px;
+  font-weight: 700;
 }
 
 p {
@@ -143,6 +144,7 @@ p {
 }
 
 .hike-gridd-item {
+  display: flex;
   width: 100%;
   background-color: #edf4ee;
   padding: 0;
@@ -174,14 +176,14 @@ p {
     justify-content: center;
     /* this and next for photos to align and change */
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     /* flex-direction: column; */
     align-items: center;
     /* needed for flex-frection: column; */
   }
 
   .hike-gridd-item {
-    width: 300px;
+    width: 600px;
     background-color: #edf4ee;
     padding: 10px;
     margin-right: 15px;
@@ -224,14 +226,14 @@ p {
     justify-content: center;
     /* this and next for photos to align and change */
     flex-wrap: wrap;
-    flex-direction: row;
+    flex-direction: column;
     /* flex-direction: column; */
     align-items: center;
     /* needed for flex-frection: column; */
   }
 
   .hike-gridd-item {
-    width: 370px;
+    width: 750px;
     background-color: #edf4ee;
     padding: 10px;
     margin-right: 15px;

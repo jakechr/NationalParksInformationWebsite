@@ -117,6 +117,7 @@ export default {
         });
         console.log(r2);
         this.addItem = r2.data;
+        this.getItems();
       } catch (error) {
         console.log(error);
       }

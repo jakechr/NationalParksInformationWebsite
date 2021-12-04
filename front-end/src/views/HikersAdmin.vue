@@ -52,14 +52,19 @@
         </div>
       </div>
     </div>
+    <custom-footer />
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import CustomFooter from "../components/CustomFooter.vue";
 
 export default {
   name: "Admin",
+  components: {
+    CustomFooter,
+  },
   data() {
     return {
       name: "",
@@ -99,6 +104,7 @@ export default {
         });
         console.log(r2);
         this.addItem = r2.data;
+        this.getItems();
       } catch (error) {
         console.log(error);
       }
@@ -144,10 +150,9 @@ export default {
 </script>
 
 <style scoped>
-.form-container {
-  display: inline-flex;
-  flex-direction: row;
-  margin: 10px;
+.content {
+  padding: 20px 100px;
+  min-height: 500px;
 }
 
 .item-display {
@@ -164,7 +169,9 @@ export default {
 }
 
 .heading {
+  align-items: center;
   display: flex;
+  flex-direction: column;
   margin-bottom: 20px;
   margin-top: 20px;
 }
@@ -200,6 +207,19 @@ button {
 
 .form {
   margin-right: 50px;
+}
+
+.add.form {
+  margin-right: 50px;
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-inputs {
+  display: block;
+  float: left;
+  max-width: 50%;
 }
 
 /* Uploaded images */
