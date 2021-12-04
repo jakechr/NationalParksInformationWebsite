@@ -280,6 +280,11 @@ button {
     float: left;
     max-width: 50%;
   }
+  .add,
+  .edit {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /* Desktop Styles */
@@ -299,6 +304,11 @@ button {
     display: block;
     float: left;
     max-width: 50%;
+  }
+  .add,
+  .edit {
+    display: flex;
+    flex-direction: row;
   }
 }
 </style>
