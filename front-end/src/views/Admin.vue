@@ -17,7 +17,7 @@
       <div class="item-display" v-if="addItem">
         <h2>{{ addItem.title }}</h2>
         <div class="item-display-image">
-          <img :src="addItem.path" />
+          <img :src="addItem.imagePath" />
         </div>
         <h3>{{ addItem.description }}</h3>
       </div>
@@ -45,7 +45,7 @@
         <p></p>
         <textarea v-model="findItem.description" />
         <p></p>
-        <img :src="findItem.path" />
+        <img :src="findItem.imagePath" />
       </div>
       <div class="actions" v-if="findItem">
         <button @click="deleteItem(findItem)">Delete</button>
